@@ -1,0 +1,45 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">防校园欺凌安全知识</view>
+  <view class="titlel-bottom">
+    <view class="edu">安全教育</view>
+    <view class="edu1">></view>
+    <view class="edu2">校园欺凌</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+      <view class="eassy_index">
+        <view>当在校园遇到校园暴力的时候，该如何对待。</view>
+      </view>
+
+      <view class="little_title">如果遇到校园欺凌该怎么办?</view>
+      <view class="eassy_index">
+        <view>遇到欺凌，安全第一。先要保护自己。哪怕是假装的迎合。事后再找老师，或者是家长的帮助。尤其是当你不确定自己能够解决时，要多听取大人们的意见。</view>
+        <image src="https://z3.ax1x.com/2021/04/27/gpoZSU.png" class="eassy_img"></image>
+        <view>学会自我保护，尽量不在学校人少的角落独处，放学按时回家，不走僻静小路。遇到校园暴力，适当拖延时间，趁机找老师或者向路人求救。受到欺凌后千万不要沉默或者报复，把事情告诉父母或者老师</view>
+        <image src="https://z3.ax1x.com/2021/04/27/gpoyp8.png" class="eassy_img"></image>
+        <view>被欺凌不需要懦弱，需要的正当合法并且有效的保护自己，逃避可以解决一时的问题，却解决不了后续的成长问题。性格的养成是众多小事件慢慢的积累而成，一个逃避问题的孩子，始终会遇到无法逃避的生活。努力提高自己的身体素质，校园欺凌表象上的伤害大多来自肉体，锻炼身体以保证自己不会是被欺辱的对象，是一种行之有效的方法。不要从自身找原因，不要将被欺凌当做命运，不要自卑。在行为上思想上强大自己，不去畏惧凌霸，但是也不要将强硬反抗作为唯一的手段。应该主动积极的将受到欺凌的事情向第三方进行求助，求助的渠道很多，常规的求助对象有父母、老师、学校、社会公益组织。执法机关等。</view>
+      </view>
+    <!-- 文章第二部分 -->
+    
+      <view class="little_title">作为家长该怎么对待？</view>
+      <view class="eassy_index">
+        <view>一旦在超市或商场发现过期变质的卖品，要坚决向食品安全部门反应，积极维护消费者自身的合法权益。</view>
+      </view>
+      <image src="https://z3.ax1x.com/2021/04/27/gpTbPP.png" class="eassy_img"></image>
+      <view class="eassy_index">
+        <view>父母是孩子最好的老师，教育孩子与人为善，不歧视他人。温馨的家庭关系，是对性格形成也很重要。一个阳光的孩子，会有一种坚毅的力量。父母的爱，能让孩子更自信。会容易些融入集体的生活。日常家庭中，不要孩子做错什么，就一段劈头盖面的骂。问清楚缘由，给孩子个倾诉机会。有时孩子是因为害怕家长的训斥，所以才不敢同家长说实话。</view>
+      </view>
+      
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>

@@ -1,0 +1,21 @@
+<view>
+<block wx:for="{{4}}" wx:key="index">
+  <view class="f-j recommend-box">
+  <view class="left">
+  <view class="img-box">
+  <image 
+  class="img"
+  src="../../utils/img/bg9.jpg"></image>
+  </view>
+  </view>
+  <view class="right">
+  <view class="right-title">
+  钉钉管理助手
+  </view>
+  <view class="right-little">
+  该联系人为什么什么什么
+  </view>
+  </view>
+  </view>
+</block>
+</view>

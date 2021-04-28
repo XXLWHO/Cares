@@ -1,0 +1,86 @@
+<view class="bg">
+  <view class="publish-bg">
+    <view class="head-imgbox">
+      <image class="head-img" src="https://gd-pub.jinshujufiles.com/hi/20200521140940_7d55f4" mode="aspectFill"></image>
+    </view>
+    <view class="publish-box">
+      <view class="centerW">
+        <view class="head-titlebox">
+        寻人启事填写
+      </view>
+      <view class="head-title">
+        非常感谢您能够参加调查，希望各区县详细填写收集的情况，希望能够得到您的大力支持与合作。现在我们就马上开始！
+      </view>
+      </view>
+      <form>
+        <view class="cell-box">
+          <view class="fill-item">
+            <van-cell-group>
+              <block wx:for="{{input_list}}" wx:key="index">
+                <van-field 
+                center="false"
+                input-align="left"
+                size="normal" 
+                type="{{item.type}}"
+                autosize="{{item.autosize}}"
+                readonly="{{item.btn_show}}" 
+                placeholder="请填写{{item.title}}"
+                  placeholder-style="color:#BFBDB9" custom-style="margin-bottom:15px;" bind:click-input="{{item.tap}}"
+                  value="{{item.value}}" 
+                  maxlength="{{item.len}}"
+                  border="{{ false }}" clearable>
+                  <view class="input-title" slot="label">
+                    {{item.title}}
+                  </view>
+                
+                </van-field>
+              </block>
+              <van-cell>
+              <view class="f ">
+              <view class="left">
+              照片
+              </view>
+              <view class="right">
+                <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+              </view>
+              </view>
+            </van-cell>
+
+
+            </van-cell-group>
+          </view>
+        </view>
+        <view class="sub-btn">
+          <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" type="primary" round hairline="true" block>
+            块级元素</van-button>
+        </view>
+      </form>
+    </view>
+  </view>
+
+  <!-- 选择器 -->
+  <view class="pick-box">
+    <view wx:if="{{showPickEare}}">
+      <view class="overlay" bind:tap="hidePickEare"></view>
+      <view>
+        <van-picker title="选择地区" show-toolbar="true" bind:confirm="areaConfirm" bind:change="areaChange"
+          class="pickerTime" columns="{{ columns }}" bind:cancel="hidePickEare" />
+      </view>
+    </view>
+    <view wx:if="{{showPickTime}}">
+      <view class="overlay" bind:tap="hidePickTime"></view>
+      <view>
+        <van-datetime-picker bind:confirm="timeConfirm" bind:cancel="hidePickTime" class="pickerTime" title="选择日期"
+          type="date" value="{{ currentDate }}" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+      </view>
+    </view>
+    <view  wx:if="{{showPickGen}}">
+      <view class="overlay" bind:tap="hidePickGen"></view>
+      <view>
+        <van-picker title="选择性别" show-toolbar="true" bind:confirm="genConfirm" 
+          class="pickerTime" 
+          columns="{{ gen_columns }}" bind:cancel="hidePickGen" />
+      </view>
+    </view>
+  </view>
+</view>

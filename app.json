@@ -1,0 +1,88 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/guidance/guidance",
+    "pages/index-detail/index-detail",
+    "pages/help/help",
+    "pages/news/news",
+    "pages/user/user",
+    "pages/logs/logs",
+    "pages/education/education",
+    "pages/article/article",
+    "pages/search/search",
+    "pages/earthquke/earthquke",
+    "pages/fire/fire",
+    "pages/drowning/drowning",
+    "pages/typhoon/typhoon",
+    "pages/releseSick/releseSick",
+    "pages/helpDetail/helpDetail",
+    "pages/share/share",
+    "pages/shareDetail/shareDetail",
+    "pages/Myhelp/Myhelp",
+    "pages/schoolForce/schoolForce",
+    "pages/phoneFraud/phoneFraud",
+    "pages/foodsafe/foodsafe",
+    "pages/provide/provide"
+  ],
+  "window":{
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#43C5FF",
+    "navigationBarTitleText": "Care",
+    "enablePullDownRefresh":false
+  },
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-search": "@vant/weapp/search/index", 
+    "van-empty": "@vant/weapp/empty/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-steps":"@vant/weapp/steps/index",
+    "van-field":"@vant/weapp/field/index",
+    "van-uploader":"@vant/weapp/uploader/index",
+    "van-button":"@vant/weapp/button/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker":"@vant/weapp/picker-column",
+    "van-card": "@vant/weapp/card/index"
+  },
+  "tabBar": {
+    "color": "#727373",
+    "selectedColor": "#96E8BA",
+    "position":"bottom",
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/utils/img/tabBarIcon/index.png",
+      "selectedIconPath": "/utils/img/tabBarIcon/indexed.png"
+    }, {
+      "pagePath": "pages/help/help",
+      "text": "帮助",
+      "iconPath": "/utils/img/tabBarIcon/help.png",
+      "selectedIconPath": "/utils/img/tabBarIcon/helped.png"
+    },
+    {
+      "pagePath": "pages/news/news",
+      "text": "社区",
+      "iconPath": "/utils/img/tabBarIcon/new.png",
+      "selectedIconPath": "/utils/img/tabBarIcon/newed.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "/utils/img/tabBarIcon/me.png",
+      "selectedIconPath": "/utils/img/tabBarIcon/meed.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json",
+  "requiredBackgroundModes": ["audio", "location"],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "将获取您的位置信息将用于【寻人启事】消息的自动推送" 
+    }
+  }
+}

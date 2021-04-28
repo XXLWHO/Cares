@@ -1,0 +1,36 @@
+<view class="detail-box">
+  <view class="head">
+    <view class="head-title">标题标题比特</view>
+    <view class="head-time">2021-4-28</view>
+  </view>
+<view class="info-box">
+  <view class="info">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe pariatur recusandae excepturi inventore velit delectus, deleniti, a quo, id omnis tenetur impedit officia dolorum! Placeat excepturi quia dolorem rerum necessitatibus.lore
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur repudiandae voluptates nemo, perferendis odio quia iure dignissimos illum sit animi! Ullam nam architecto, tempora ex velit labore sapiente quos dicta.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis est porro excepturi, magni consequatur quo, quis soluta quos voluptates adipisci temporibus culpa minima veniam nemo sint vel cumque vero nisi.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi impedit reiciendis natus possimus quaerat veritatis ad id ab sapiente, inventore aliquid vel, distinctio esse dolorum officiis hic! Impedit, rerum ut.
+  </view>
+  <view class="info-img">
+    <image class="img" src="../../utils/img/bg8.jpg" mode="aspectFill"></image>
+  </view>
+</view>
+
+<view class="share-box f-a">
+<view class="share-left f-j" bindtap="goBack">
+  <van-icon name="wap-home-o"  size="25px"
+   />
+    <view class="f-a btn-text">案例首页</view>
+</view>
+<view class="share-right">
+<view class="share-btn f-j">
+    <van-icon 
+    size="25px"
+    name="wechat"  color="#fff"/>
+    <view class="f-a btn-text">分享</view>
+</view>
+
+</view>
+
+</view>
+
+</view>

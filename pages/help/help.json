@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-sidebar": "@vant/weapp/sidebar/index",
+  "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+  "help-psy":"/Components/help-psy/index",
+  "help-gov":"/Components/help-gov/index",
+  "help-find":"/Components/help-find/index",
+  "help-sick":"/Components/help-sick/index",
+  "help-recommend":"/Components/help-recommend/index",
+  "help-share":"/Components/help-share/index"
+  },
+  "navigationBarTitleText": "帮助"
+}

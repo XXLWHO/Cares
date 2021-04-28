@@ -1,0 +1,45 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">食品安全知识</view>
+  <view class="titlel-bottom">
+    <view class="edu">安全教育</view>
+    <view class="edu1">></view>
+    <view class="edu2">食品安全</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+      <view class="eassy_index">
+        <view>食品安全一直是党和国家十分关注的问题，也是关乎广大人民群众切身利益的大事儿。面对食品安全领域的问题，我们应该如何注意防范呢？</view>
+      </view>
+
+      <view class="little_title">怎么保证平时的食物安全?</view>
+      <view class="eassy_index">
+        <view>无论是否使用筷子，无论是否用手直接接触食物，饭前饭后洗手都是一个好习惯。这样可以保证人体不会将更多的细菌弄到食物上，避免因为手部细菌导致的植物中毒现象。平时吃的肉类一定要烧熟煮透。</view>
+        <image src="https://z3.ax1x.com/2021/04/27/g9CGV0.png" class="eassy_img"></image>
+        <view>很多人为了节省，看到食物刚刚过了保质期没多久，或者微微有些变质，就舍不得扔掉，想着没事儿。可是，吃下去以后就产生不好的反应，轻者拉肚子，重者食物中毒，危及生命。所以，一定要保证日常饮食安全健康，忌吃过期变质食物。大多数时候，大家都会把前一天吃剩下的饭菜留到第二天解决。其实，过夜的饭菜即使放在冰箱里保鲜，也会发生微反应，造成微量变质。特别是肉质食物，隔夜以后更会发生更强烈的变质反应，只是人肉眼察觉不到而已。</view>
+        <image src="https://z3.ax1x.com/2021/04/27/g9pb0P.png" class="eassy_img"></image>
+        <view>有毒有害物质的食用：很多的额食品之间是相互克制的，比如柿子和螃蟹，这类的食品食用的时候，切勿两者一起吃。外出用餐的时候，一定要注意用餐环境和厨房环境，尽量去一些装潢比较好，环境比较卫生的地方吃饭。路边的小摊贩、环境比较恶劣的餐饮小店最好不要光顾，遇到不卫生的环境要坚决抵制。</view>
+      </view>
+    <!-- 文章第二部分 -->
+    
+      <view class="little_title">遇到不法商贩怎么处理？</view>
+      <view class="eassy_index">
+        <view>一旦在超市或商场发现过期变质的卖品，要坚决向食品安全部门反应，积极维护消费者自身的合法权益。投诉部门：1、食品药品监督管理局；2、市场监督管理局；3、售卖点管理部门；4、公安局110。</view>
+      </view>
+      <image src="https://z3.ax1x.com/2021/04/27/g9FvsH.png" class="eassy_img"></image>
+      <view class="eassy_index">
+        <view>父母是孩子最好的老师，教育孩子与人为善，不歧视他人。温馨的家庭关系，是对性格形成也很重要。一个阳光的孩子，会有一种坚毅的力量。父母的爱，能让孩子更自信。会容易些融入集体的生活。日常家庭中，不要孩子做错什么，就一段劈头盖面的骂。问清楚缘由，给孩子个倾诉机会。有时孩子是因为害怕家长的训斥，所以才不敢同家长说实话。</view>
+      </view>
+      
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>

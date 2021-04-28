@@ -1,0 +1,205 @@
+/* .index-box{
+} */
+.index-bg{
+  background-image: url('https://ftp.bmp.ovh/imgs/2021/04/45d60af8959b53b3.png');
+  width: 100%;
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+.location-content{
+  color: #727373;
+  font-size: 14px;
+}
+
+.search {
+  width: 100%;
+  margin: 0 auto;
+  /* height: 100rpx; */
+}
+
+.icon-size {
+  margin-top: 1px;
+  margin-right: 10rpx;
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.swiper-img{
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15rpx;
+}
+
+.choose-box{
+  background-color: #ffffff;
+  margin: 0 10px 20rpx;
+  /* padding: 10px 0; */
+  width: 95%;
+  border-radius: 15rpx;
+  box-shadow: 0px 0px 7px #a2a3a3;
+}
+
+.box-bottom {
+  margin-bottom: 20rpx;
+}
+.nav{
+  flex: 1;
+  flex-shrink: 1;
+  text-align: center;
+}
+.choose-img{
+  width: 100rpx;
+  height: 100rpx;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.choose-text{
+  font-size: 25rpx;
+  color: #727373;
+  font-weight: 400;
+  text-align: center;
+}
+.data-box{
+  border: 1px solid #eeeeee;
+  margin: 10px 0;
+}
+.data-item{
+  flex: 1;
+  height: 250px;
+  flex-shrink: 1;
+  padding: 2px;
+}
+.left-item{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  grid-gap:2px;
+}
+.left-img{
+  height: 100%;
+}
+.img-one{
+  width: 100%;
+  height: 100%;
+}
+.cell-box{
+  background-color: #eeeeee;
+}
+.van-cell-text{
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.litte-text{
+  font-size: 22rpx;
+  font-weight: lighter;
+}
+.left{
+  border-radius: 5rpx;
+  width: 100px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+/* 热点资讯 */
+.hot-spot {
+  background-color: #fff;
+  height: 200rpx;
+  padding:10rpx 40rpx;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  width: 95% !important;
+  margin: 0 auto;
+}
+
+.hot-head {
+  display: flex;
+}
+
+.fireIcon {
+  margin-top: 13rpx;
+}
+
+.hot-head image {
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.hot-titles {
+  line-height: 37rpx;
+  margin-top: 13rpx;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  font-weight: 500;
+  color: #727373;
+}
+
+.hot-color-first {
+  color: #FF0000;
+  font-size: 30rpx;
+}
+
+.hot-color-second {
+  color: #FF4500;
+  font-size: 30rpx;
+}
+
+.hot-color-third {
+  color: #FF6347;
+  font-size: 30rpx;
+}
+
+.hot-title {
+  color:#727373;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+
+.hot-key {
+  display: flex;
+  position: relative;
+}
+
+.hot-icon {
+  height: 48rpx;
+  width: 50rpx;
+  position: absolute;
+  right: 20rpx;
+}
+
+.hot-key {
+  padding: 5rpx 0;
+}
+
+.nav {
+  display: block;
+  padding: 10rpx 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.swiper-box {
+  margin-bottom: 20rpx;
+}
+
+.Removes {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.removeText {
+  font-size: 20rpx !important;
+}
+
+.btn button {
+  width: 100rpx;
+  height: 50rpx;
+}

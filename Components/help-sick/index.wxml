@@ -1,0 +1,56 @@
+<!--Components/help-sick/index.wxml-->
+<view class="index">
+  <!-- 求助 -->
+  <view class="help" bindtap="UserSick">
+    <!-- 标题 -->
+    <view class="title">
+      <text>快来帮助蔡文品这个帅比吧</text>
+    </view>
+    <!-- 照片 -->
+    <view class="helpImg">
+      <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png"></image>
+    </view>
+    <!-- 查看 -->
+    <view class="helpAbout">
+      <text>查看详情</text>
+    </view>
+  </view>
+
+  <view class="help">
+    <!-- 标题 -->
+    <view class="title">
+      <text>快来帮助蔡文品这个帅比吧</text>
+    </view>
+    <!-- 照片 -->
+    <view class="helpImg">
+      <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png"></image>
+    </view>
+    <!-- 查看 -->
+    <view class="helpAbout">
+      <text>查看详情</text>
+    </view>
+  </view>
+
+  <view class="help">
+    <!-- 标题 -->
+    <view class="title">
+      <text>快来帮助蔡文品这个帅比吧</text>
+    </view>
+    <!-- 照片 -->
+    <view class="helpImg">
+      <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png"></image>
+    </view>
+    <!-- 查看 -->
+    <view class="helpAbout">
+      <text>查看详情</text>
+    </view>
+  </view>
+
+  <!-- 发布求助 -->
+  <view class="helpMe" bindtap="HelpMe">
+    <view class="center">
+      <van-icon name="edit" size="25rpx" color="#ffffff"/>
+      <text>发布求助</text>
+    </view>
+  </view>
+</view>

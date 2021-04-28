@@ -1,0 +1,27 @@
+<!--Components/help-sick/index.wxml-->
+<view class="index">
+  <!-- 求助 -->
+  <view class="MyShare" wx:for="{{shareDetail}}" wx:key="article_id">
+    <navigator url="../../pages/shareDetail/shareDetail?article_id={{item.article_id}}">
+      <view class="acticle">
+      <!-- 图片 -->
+      <view class="left">
+        <image src="{{item.image_url}}" mode="aspectFill"></image>
+      </view>
+      <!-- 标题内容 -->
+      <view class="middle">
+        <view class="MyTitle">{{item.tittle}}</view>
+        <text class="MyActicles">{{item.content}}</text>
+      </view>
+    </view>
+    </navigator>
+  </view>
+
+  <!-- 发布求助 -->
+  <view class="ShareMe" bindtap="ShareMe">
+    <view class="center">
+      <van-icon name="edit" size="25rpx" color="#ffffff"/>
+      <text>分享</text>
+    </view>
+  </view>
+</view>

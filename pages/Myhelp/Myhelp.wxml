@@ -1,0 +1,143 @@
+<van-tabs active="a" color="#43C5FF">
+  <!-- 大病求助 -->
+  <van-tab title="大病求助" name="a">
+    <view class="MyActicle">
+    <view class="acticle">
+      <!-- 图片 -->
+      <view class="left" bindtap="myHelp">
+        <image src="../../utils/img/20210324021815935.jpg"></image>
+      </view>
+      <!-- 标题内容 -->
+      <view class="middle" bindtap="myHelp">
+        <view class="MyTitle">蔡文品好帅</view>
+        <text class="MyActicles">内容gas的看法路过sad会计分录噶是的克己奉公会计师的拉格斐德生科技奥拉夫广东省考几分</text>
+      </view>
+      <!-- 时间按钮 -->
+      <view class="right">
+        <text class="MyTime">2020/4/22</text>
+        <van-button type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal" bindtap="remove">删除</van-button>
+      </view>
+    </view>
+    <!-- 进度条 -->
+    <view class="progress">
+      <text class="status">审批状态</text>
+      <van-steps direction="horizontal" active-color="#43C5FF" active="2" steps="{{steps}}"></van-steps>
+    </view>
+  </view> 
+
+  <view class="MyActicle">
+    <view class="acticle">
+      <!-- 图片 -->
+      <view class="left">
+        <image src="../../utils/img/20210324021815935.jpg"></image>
+      </view>
+      <!-- 标题内容 -->
+      <view class="middle">
+        <view class="MyTitle">蔡文品好帅</view>
+        <text class="MyActicles">内容gas的看法路过sad会计分录噶是的克己奉公会计师的拉格斐德生科技奥拉夫广东省考几分</text>
+      </view>
+      <!-- 时间按钮 -->
+      <view class="right">
+        <text class="MyTime">2020/4/22</text>
+        <van-button type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal">删除</van-button>
+      </view>
+    </view>
+    <!-- 进度条 -->
+    <view class="progress">
+      <text class="status">审批状态</text>
+      <van-steps direction="horizontal" active-color="#43C5FF" active="2" steps="{{steps}}"></van-steps>
+    </view>
+  </view> 
+
+  <view class="MyActicle">
+    <view class="acticle">
+      <!-- 图片 -->
+      <view class="left">
+        <image src="../../utils/img/20210324021815935.jpg"></image>
+      </view>
+      <!-- 标题内容 -->
+      <view class="middle">
+        <view class="MyTitle">蔡文品好帅</view>
+        <text class="MyActicles">内容gas的看法路过sad会计分录噶是的克己奉公会计师的拉格斐德生科技奥拉夫广东省考几分</text>
+      </view>
+      <!-- 时间按钮 -->
+      <view class="right">
+        <text class="MyTime">2020/4/22</text>
+        <van-button type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal">删除</van-button>
+      </view>
+    </view>
+    <!-- 进度条 -->
+    <view class="progress">
+      <text class="status">审批状态</text>
+      <van-steps direction="horizontal" active-color="#43C5FF" active="2" steps="{{steps}}"></van-steps>
+    </view>
+  </view> 
+
+  </van-tab>
+  <!-- 寻人启事 -->
+  <van-tab title="寻人启事" name="b">
+    <view class="MyActicle">
+    <view class="acticle">
+      <!-- 图片 -->
+      <view class="left">
+        <image src="../../utils/img/20210324021815935.jpg"></image>
+      </view>
+      <!-- 标题内容 -->
+      <view class="middle">
+        <view class="MyTitle">蔡文品好帅</view>
+        <text class="MyActicles">内容gas的看法路过sad会计分录噶是的克己奉公会计师的拉格斐德生科技奥拉夫广东省考几分</text>
+      </view>
+      <!-- 时间按钮 -->
+      <view class="right">
+        <text class="MyTime">2020/4/22</text>
+        <van-button type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal">删除</van-button>
+      </view>
+    </view>
+    <!-- 进度条 -->
+    <view class="progress">
+      <text class="status">审批状态</text>
+      <van-steps direction="horizontal" active-color="#43C5FF" active="2" steps="{{steps}}"></van-steps>
+    </view>
+  </view>
+
+  <view class="MyActicle">
+    <view class="acticle">
+      <!-- 图片 -->
+      <view class="left">
+        <image src="../../utils/img/20210324021815935.jpg"></image>
+      </view>
+      <!-- 标题内容 -->
+      <view class="middle">
+        <view class="MyTitle">蔡文品好帅</view>
+        <text class="MyActicles">内容gas的看法路过sad会计分录噶是的克己奉公会计师的拉格斐德生科技奥拉夫广东省考几分</text>
+      </view>
+      <!-- 时间按钮 -->
+      <view class="right">
+        <text class="MyTime">2020/4/22</text>
+        <van-button type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal">删除</van-button>
+      </view>
+    </view>
+    <!-- 进度条 -->
+    <view class="progress">
+      <text class="status">审批状态</text>
+      <van-steps direction="horizontal" active-color="#43C5FF" active="2" steps="{{steps}}"></van-steps>
+    </view>
+  </view>
+  </van-tab>
+</van-tabs>
+
+<van-popup
+  show="{{ show }}"
+  closeable
+  round
+  custom-style="height: 14%;width:50%;padding:20rpx;display:block"
+  bind:close="onClose"
+>
+<view style="width:90%;height:100%;margin:5rpx auto;">
+  <text style="color:#898989;font-size:26rpx">此操作将会删除求助，确定继续吗？</text>
+  <view style="display:flex;margin-top:20rpx">
+    <button style="width:100rpx;height:50rpx;line-height:50rpx;font-size:25rpx;background-color:#FF6347;color:#fff">确认</button>
+    <button style="width:100rpx;height:50rpx;line-height:50rpx;font-size:25rpx;background-color:#43C5FF;color:#fff">取消</button>
+  </view>
+</view>
+</van-popup>

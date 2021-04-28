@@ -1,0 +1,47 @@
+<view class="find-bg">
+<block wx:for="{{5}}" wx:key="index">
+<view class="find-item">
+    <van-card
+    custom-class="background:#ffffff"
+  desc="寻人启事详情"
+  lazy-load
+  tag="急寻"
+  thumb-mode="widthFix"
+  thumb="/utils/img/bg8.jpg"
+
+>
+<view slot="title" class="title" >
+  地区-姓名-年龄
+</view>
+<view slot="footer" >
+    <van-button 
+    round
+    color=""
+    type="warning"
+    size="small"
+    plain
+    bindtap="goFindDetail"
+    >查看此详情</van-button>
+    <van-button 
+    round
+    color=""
+    type="danger"
+    size="small"
+    bind:click="makePhone"
+    >联系登记人</van-button>
+  </view>
+</van-card>
+</view>
+</block>
+<!-- 发布按钮 s -->
+<view class="find-publish" bindtap="goPublish">
+  <van-button 
+  icon="edit"
+  type="primary"
+  color="#43C5FF"
+  square
+  block>发布寻人启事</van-button>
+</view>
+<!-- 发布按钮 e-->
+
+</view>

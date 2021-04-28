@@ -1,0 +1,15 @@
+<view>
+  <view class="item-box">
+  <block wx:for="{{5}}" wx:key ="index">
+<van-cell-group bindtap="makePhone">
+  <van-cell title="政府热线" label="181818181818" border="{{ false }}" >
+  <view slot="right-icon">
+  <image class="phone-img"
+  src="https://z3.ax1x.com/2021/04/26/gpKzRI.png"></image>
+  </view>
+  
+  </van-cell>
+</van-cell-group>
+</block>
+  </view>
+</view>

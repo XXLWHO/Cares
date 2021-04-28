@@ -1,0 +1,45 @@
+<view class="body-bg">
+  <!-- 图片动画 s -->
+  <view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+      vertical="{{vertical}}" easing-function="easeInOutCubic" style="height:{{swiper_height +'px'}};"
+      bindchange="closeAuto">
+      <block wx:for="{{3}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}">
+            <!-- <van-transition show="{{ true}}" custom-class="block" name="fade-up"
+              duration="{{ { enter: 1000, leave: 1000 } }}" enter-class="van-enter-class"
+              enter-active-class="van-enter-active-class" leave-active-class="van-leave-active-class"
+              leave-to-class="van-leave-to-class"> -->
+              <image class="bg-class" src="../../utils/img/bg{{item+1}}.jpg"></image>
+            <!-- </van-transition> -->
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 图片动画 e -->
+  
+  <!-- 设置遮罩层 s -->
+  <view class="overlay"> 
+    <van-overlay show="{{ true }}" />
+  </view>
+  <!-- 设置遮罩层 e -->
+<view class="up-box">
+
+    <!-- 遮罩层上 信息 s-->
+    <view class="info">
+      <view class="content">
+        {{info}}
+      </view>
+    </view>
+    <!-- 遮罩层上 信息 e-->
+    <!-- 进入按钮 s -->
+    <view wx:if="{{showBtn}}">
+      <button bindtap="goIndex" > 点击进入</button>
+    </view>
+    <!-- 进入按钮 e -->
+</view>
+
+</view>
+

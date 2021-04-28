@@ -1,0 +1,41 @@
+.van-nav-bar {
+  padding-top:0px !important;
+}
+.van-nav-bar__title,.van-nav-bar__text{
+  color: #4ABCFC !important;
+}
+.detail-box{
+  padding: 5px 10px;
+}
+.meun-1,.meun-2{
+  margin-left: 5px;
+  color: #8C8C8C;
+  font-size: 22rpx;
+}
+.meun-2{
+color: #222222;
+font-size: 18rpx;
+font-weight: 550;
+}
+.title{
+  margin: 10px 0;
+font-size: 28rpx;
+color: #222222;
+
+}
+.img-box{
+  width: 100%;
+  height: 300px;
+}
+.img{
+  width: 100%;
+  height: 100%;
+}
+.detail-box{
+  text-align: justify;
+  font-weight: 550;
+  font-size: 22rpx;
+  letter-spacing: 1rpx;
+  margin: 10px 0;
+  color: #979797;
+}

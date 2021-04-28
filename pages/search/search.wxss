@@ -1,0 +1,27 @@
+.search-bg{
+  background-color: rgba(160, 161, 161, 0.096);
+  height: 100vh;
+}
+.search-box{
+  margin-bottom: 10px;
+}
+.class-box{
+  padding: 0px 0;
+}
+.icon-box{
+  vertical-align: middle;
+}
+.class-title{
+  padding: 0 3px;
+  color: #a0a1a1;
+  font-size: 26rpx;
+}
+.tag-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20rpx;
+  text-align: left;
+  color: #a0a1a1;
+  font-size: 28rpx;
+
+}

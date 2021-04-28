@@ -1,0 +1,42 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">防地震安全知识</view>
+  <view class="titlel-bottom">
+    <view class="edu">安全教育</view>
+    <view class="edu1">></view>
+    <view class="edu2">防地震</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+      <view class="eassy_index">
+        <view>我们永远不知道意外和明天哪个会先到来。当地震突发的时候，我们该如何保护好自己。</view>
+      </view>
+
+      <view class="little_title">地震来了怎么办?</view>
+      <view class="eassy_index">
+        <view>地震发生时，在室外或者较低楼层的要赶紧跑到开阔、远离高大建筑物的地方，选择一个安全的位置，用手护头蹲下。如果是在楼层比较高的地方，可以往楼顶处跑，但是一定不能乘坐电梯，因为电梯断电后会被困在电梯里，同时也要注意身边的窗户，避免被因为剧烈震动而掉落的窗户砸到。</view>
+        <image src="https://ftp.bmp.ovh/imgs/2021/04/25e96699295fdc8d.png" class="eassy_img"></image>
+        <view>如果来不及跑，要就近躲藏。可以选择桌子、墙角等容易形成三角区域的地方，同时要注意远离插座、电线杆等容易着火的地方。逃生的过程中肯定免不了拥堵，要注意有序逃生，避免因为拥堵而引起踩踏事件，拖延逃生时间。如果在家里千万不能随意跳楼或者躲在衣柜或者床底，地震发生后，救援人员不一定能立即找到被困人员，床虽然比较结实，但是难以逃出来，而过久地待在衣柜则会导致窒息。</view>
+        <image src="https://ftp.bmp.ovh/imgs/2021/04/ec460a948576f3e2.png" class="eassy_img"></image>
+        <view>地震时不要拿太多物品，如果来得及，可以携带一些水或者其他食物，但是千万不要因为留恋财产而延误了逃生的时间。假如不幸被困在废墟下，要用一些棍状物体支撑住掉落的物体，要保持镇静，保留体力等待救援人员。</view>
+        <image class="eassy_img" src="https://ftp.bmp.ovh/imgs/2021/04/9fd529e5ba17cd3f.png"></image>
+      </view>
+    <!-- 文章第二部分 -->
+    
+      <view class="little_title">不要听信谣言，不要轻举妄动</view>
+      <view class="eassy_index">
+        <view>发生地震时，人们心理上易产生动摇。为防止混乱，必须依据正确的信息，冷静的采取行动，这点极为重要。一是从携带的收音机中，听取正确的信息。而是相信从政府、警察、消防等防灾机构直接得到的消息，绝不轻信不负责任的流言蜚语，更不能轻举妄动。</view>
+      </view>
+      <image src="https://ftp.bmp.ovh/imgs/2021/04/bd56c80ddf3798c9.png" class="eassy_img"></image>
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>

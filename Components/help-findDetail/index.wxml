@@ -1,0 +1,46 @@
+<view class="index">
+  <!-- 图片 -->
+  <view class="imageUrl">
+    <image src="https://gd-pub.jinshujufiles.com/hi/20200521140940_7d55f4" mode="aspectFill"></image>
+  </view>
+  <view class="tips">
+    <text>以下信息已通过审核，情况属实。帮助别人是一种高尚的美，而一个大集体就是用这种美构成的。一个集体如果拥有这样的美，那它一定是一个强大的集体。</text>
+  </view>
+
+  <view class="HelpText">
+  <!-- 标题正文 -->
+  <view class="helpTitle">
+    <view class="head">
+    <view class="title">
+    请大家帮忙寻找,多多转发！！！
+    </view>
+  </view>
+    <!-- 求助信息 -->
+    <view class="userMessage">
+      <text>蔡文品，</text>
+      <text>男，</text>
+      <text>汉族，</text>
+      <text>四川广安邻水人，</text>
+      <text>身份证号：511623200010306332，</text>
+      <text>联系电话：13550993955</text>
+    </view>
+    <view class="line"></view>
+    <!-- 求助描述 -->
+    <view class="userDe">
+      <view class="title">详细情况</view>
+      <view class="userMessage">
+        <text>因为太帅天天被富婆骚扰，怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办</text>
+      </view>
+      <view class="Img">
+        <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png" mode="widthFix"></image>
+      </view>
+      <view class="time">2021/4/21</view>
+    </view>
+  </view>
+  </view>
+
+  <!-- 点击 -->
+  <view class="bottomBtn">
+    <van-button color="#43C5FF" block>联系他</van-button>
+  </view>
+</view>

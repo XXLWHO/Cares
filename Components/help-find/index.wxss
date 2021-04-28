@@ -1,0 +1,28 @@
+.find-bg{
+  background-color: #fafafa;
+  margin-bottom: 50px;
+
+}
+.find-item{
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px #e0dddd;
+}
+.van-card{
+  background-color: #ffffff !important;
+}
+.title{
+  font-size: 15px;
+  font-weight: bold;
+}
+.find-publish{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 80px;
+  z-index: 100;
+}
+
+.van-button--small {
+    margin:0  3px ;
+}

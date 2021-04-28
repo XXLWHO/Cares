@@ -1,0 +1,44 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">防溺水安全知识</view>
+  <view class="titlel-bottom">
+    <view class="edu">安全教育</view>
+    <view class="edu1">></view>
+    <view class="edu2">防溺水</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+  
+      <view class="eassy_index">
+        <view>溺水大多发生在夏季或者洪涝灾害时，一定不能去水库池塘等地方游泳，如果有条件可以在会游泳的人的陪同下去游泳管游泳。</view>
+      </view>
+
+      <view class="little_title">当看到有人溺水该怎么做？</view>
+      <view class="eassy_index">
+        <view>当发现有人溺水时，首先要保持理智，从容面对，不要盲目做出错误的决策，以免错过了最佳的救助时间。发现有人溺水时，如果没有十足的把握，自己不要下水施救，这是很危险的，因为溺水者此时的求生意志非常强，会不顾一切地抓住可以抓住的东西，如果你下水了，就算你会游泳，也有可能被拖下水，从而面临危险。</view>
+        <image src="https://z3.ax1x.com/2021/04/23/cXE1YQ.png" class="eassy_img"></image>
+        <view>当发现有人溺水时，如果周围有人，可以大声呼救，以引起他人的注意，人多力量大，这样才能更好地救助落水者。当发现有人溺水时，可以采取一些方法为溺水者赢取更多的时间，比如把两个空的矿泉水瓶装在一个塑料袋里，然后扔给溺水者，注意不要盲目扔，要提醒溺水者，以便能抓到，这样溺水者的头部就不会沉下去。也可以把多件衣服系成一根长绳或一个救生圈抛给溺水者让他抓住，然后再合力把溺水者救起，这样溺水者就得救了。</view>
+        <image src="https://ftp.bmp.ovh/imgs/2021/04/4b5030bea308c180.png" class="eassy_img"></image>
+        <view>发现有人溺水，可以打电话报警，多一种方式多一种力量，当然了，报警前尽可能采取较多的方式为溺水者争取更多的时间。</view>
+      </view>
+    <!-- 文章第二部分 -->
+    
+      <view class="little_title">当溺水了怎么办？</view>
+      <view class="eassy_index">
+        <view>溺水时候，人就会呛水等各种因素导致精神慌乱进而使获救求生的机会减少，这时候一定要使自己冷静下来，尽可能的使身体浮在水里，让整个脸露在水面上，有可能的话看周围有什么漂浮的物体或者可以利用的东西，你就一定要抓住了。</view>
+      <image src="https://z3.ax1x.com/2021/04/23/cXZoLt.png" class="eassy_img"></image>
+      <view class="eassy_index">如果被水草缠住了，自己慌乱地去挣脱是件非常耗体力的事情，有可能会越缠越多，我们可以利用自身携带的小刀或者其他锋利的东西割断水草，如果数量多的话最好等到其他人来救。</view>
+      </view>
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>
+

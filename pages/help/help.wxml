@@ -1,0 +1,38 @@
+<view>
+<!-- 侧边导航栏 s-->
+<view class="slider-box"> 
+  <van-sidebar active-key="{{ activeKey }}" bind:change="changeActive">
+  <block wx:for="{{tabList}}" wx:key="index">
+    <van-sidebar-item title="{{item.title}}" />
+  </block>
+</van-sidebar>
+</view>
+<!-- 侧边导航栏 e-->
+<!-- 右边页面组  切换需要的组件 -->
+<view class="right-box">
+<!-- 右边盒子 s -->
+    <block wx:if="{{activeKey === 0}}">
+    <help-psy></help-psy>
+    </block>
+
+    <block wx:if="{{activeKey === 1}}">
+    <help-gov></help-gov>
+    </block>
+    <block wx:if="{{activeKey === 2}}">
+    <help-find></help-find>
+    </block>
+
+    <block wx:if="{{activeKey === 3}}">
+      <help-sick></help-sick>
+    </block>
+    <block wx:if="{{activeKey === 4}}">
+      <help-recommend></help-recommend>
+    </block>
+
+    <block wx:if="{{activeKey === 5}}">
+      <help-share></help-share>
+    </block>
+</view>
+
+<!-- 右边盒子 e -->
+</view>

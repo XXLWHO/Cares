@@ -1,0 +1,31 @@
+<view class="index">
+  <view class="imageUrl">
+    <image src="https://gd-pub.jinshujufiles.com/hi/20200521140940_7d55f4" mode="aspectFill"></image>
+  </view>
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">{{share.tittle}}</view>
+  <view class="titlel-bottom">
+    <view class="edu">分享</view>
+    <view class="edu1">></view>
+    <view class="edu2">{{share.type}}</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 发表人 -->
+  <view class="UserText">
+    <text class="userName">{{shre.name}}</text>
+    <text class="share">发表分享</text>
+  </view>
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+      <view class="eassy_index">
+        <view>{{share.content}}</view>
+        <image src="{{share.image_url}}" class="eassy_img" mode="aspectFill"></image>
+      </view>
+    <!-- 文章第二部分 -->
+    </view>
+    <view class="time">{{date}}</view>
+  </view>
+</view>

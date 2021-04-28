@@ -1,0 +1,39 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">防台风安全知识</view>
+  <view class="titlel-bottom">
+    <view class="edu">安全教育</view>
+    <view class="edu1">></view>
+    <view class="edu2">防台风</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+
+      <view class="little_title">发生台风的时候该怎么办？</view>
+      <view class="eassy_index">
+        <view>关闭门窗，不要在玻璃门、玻璃窗附近逗留、观看，减少，降低，空气对流。不要靠近有危险的建筑物，尤其正在建设中的建筑物，手脚架等，不要站在大树旁边，尽量不要在户外逗留，争取快速进入安全户内。车辆减速，密切观察周围环境，争取快速停靠，进入安全户内。</view>
+        <image src="https://z3.ax1x.com/2021/04/23/cXuHXj.png" class="eassy_img"></image>
+        <view>户外电线吹断，电线杆吹倒，尽量及时远离，户内断电，要切掉电源，拔掉开关插座，并且留意最新台风情况。发现高空有坠物危险，或者广告牌摇摇晃晃，首先要远离，到安全位置，并且及时通知有关部门支援处理。</view>
+      </view>
+    <!-- 文章第二部分 -->
+    
+      <view class="little_title">怎么预防台风？</view>
+      <view class="eassy_index">
+        <view>准备食物矿泉水。听起来可能有些夸张，对台风影响来说，准备些干粮和饮用水绝对没错。因为台风到来，很可能遇上停电停水，万一遇困上个一两天的话，这些东西就派上用场了。特别家中有小朋友的更要注意，所以准备充足肯定是没错的。</view>
+      <image src="https://z3.ax1x.com/2021/04/23/cXMQRU.png" class="eassy_img"></image>
+      <view class="eassy_index">准备一些诸如手电筒、蜡烛和蓄电的节能灯。因为台风停水停电了，家里进水了不安全，要夜出而行，四周围一片漆黑什么也看不见，台风夜不比平时夜，没准会有什么被吹倒的东西横在你前方令你摔跤，所以光线是很重要的。</view>
+      </view>
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>
+
+

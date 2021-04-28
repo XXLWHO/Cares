@@ -1,0 +1,38 @@
+<!--pages/user/user.wxml-->
+<view class="index">
+  <!-- 头像 -->
+  <view class="avater">
+    <image src="{{avaterUrl}}" class="avater_img"></image>
+    <view class="avater_box">
+      <image class="avater_url" src="{{avaterUrl}}"></image>
+      <view class="user_name">{{nickName}}</view>
+    </view>
+  </view>
+  <!-- 主体 -->
+  <view class="title">
+    <!-- 文章进度 -->
+    <view class="article" bindtap="bindtapArticle">
+      <van-icon name="todo-list" size="40rpx" style="margin: 0 20rpx;color:#43C5FF"/>
+      <view class="article_title">
+        文章进度
+      </view>
+      <van-icon name="arrow" size="40rpx" class="icon" style="color:#898989"/>
+    </view>
+    <!-- 我的求助 -->
+    <view class="article" bindtap="bindtapMyhelp">
+      <van-icon name="chat" size="40rpx" style="margin: 0 20rpx;color:#43C5FF"/>
+      <view class="article_title">
+        我的求助
+      </view>
+      <van-icon name="arrow" size="40rpx" class="icon" style="color:#898989"/>
+    </view>
+    <!-- 关于我们 -->
+    <view class="about">
+      <van-icon name="friends" size="40rpx" style="margin: 0 20rpx;color:#43C5FF"/>
+      <view class="article_title">
+        关于我们
+      </view>
+      <van-icon name="arrow" size="40rpx" class="icon" style="color:#898989"/>
+    </view>
+  </view>
+</view>

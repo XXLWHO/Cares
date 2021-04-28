@@ -1,0 +1,30 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">心理寻助详情</view>
+  <view class="titlel-bottom">
+    <view class="edu">心理寻助</view>
+    <view class="edu1">></view>
+    <view class="edu2">安全</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <view class="eassy_first">
+      <view class="little_title">标题 标题</view>
+      <view class="eassy_index">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sapiente molestiae fuga ex inventore natus ipsam suscipit pariatur, ducimus corporis! Maxime ex commodi voluptatibus rerum veniam sunt dolor distinctio officia.lore
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur totam quos reiciendis! Quos, aut explicabo? Vitae ipsum maiores, cupiditate cumque assumenda nihil inventore facere aspernatur, temporibus sint, fugit aperiam ratione!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet veritatis incidunt adipisci aperiam veniam inventore autem sapiente doloribus. Quia nemo recusandae provident ipsam modi voluptatibus possimus nulla qui cum ex!lore
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus suscipit eos nobis eligendi, pariatur, similique nesciunt voluptatibus ipsa eum doloremque? At, aut temporibus. Magnam ex sapiente maxime doloremque sit?
+        就哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+    </view>
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>
+

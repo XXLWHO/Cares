@@ -1,0 +1,48 @@
+<view>
+<!-- 导航栏 s -->
+  <van-nav-bar
+  title="标题"
+  right-text="分享"
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+  custom-class="color:#4ABCF"
+></van-nav-bar>
+<!-- 导航栏 e-->
+
+<!-- 详情盒子 s -->
+<view class="detail-box">
+<!-- 二级菜单 s -->
+<view class="meun f">
+  <van-icon name="wap-home"  color="#B0B0B0"/>
+  <view class="meun-1">
+  性别教育/ 
+  </view>
+  <view class="meun-2">
+  时间佛安抚</view>
+</view>
+<!-- 二级菜单 e -->
+
+<!-- 标题 s -->
+<view class="title">
+标题
+</view>
+<!-- 标题 e -->
+
+<!-- 图片 s -->
+<view class="img-box">
+<image class ="img" src="../../utils/img/bg2.jpg" lazy-load></image>
+</view>
+<!-- 图片 e -->
+</view>
+
+<!-- 文字详情 s -->
+<view class="detail-box">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, ducimus repellat eveniet perspiciatis necessitatibus, nulla dicta veniam vero similique, excepturi possimus? Minus magnam ipsa a facilis quia nam vitae beatae!
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel cum, nulla laudantium ipsam delectus tenetur deleniti, molestiae saepe esse natus, et nobis eveniet minus necessitatibus fuga reprehenderit cupiditate maiores corporis.
+
+</view>
+<!-- 文字详情 e -->
+<!-- 详情盒子 e -->
+
+
+</view>

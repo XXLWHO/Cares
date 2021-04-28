@@ -1,0 +1,42 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">防电信诈骗安全知识</view>
+  <view class="titlel-bottom">
+    <view class="edu">安全教育</view>
+    <view class="edu1">></view>
+    <view class="edu2">电信诈骗</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+      <view class="eassy_index">
+        <view>近几年来，电信诈骗案件频发，犯罪手段不断翻新，诈骗方式形式多样，因此，我们也要主动提高防范能力，防止上当受骗。</view>
+      </view>
+
+      <view class="little_title">怎么防范电信诈骗</view>
+      <view class="eassy_index">
+        <view>只要一谈到银行卡，一律挂掉；只要一谈到中奖，一律挂掉；只要一谈到电话转公检法，一律挂掉；只要一看到点击链接的短信，立即删掉；微信不认识的人发链接，一律不点；凡是电话说家属出事要求汇款的，一律挂掉。</view>
+        <image src="https://z3.ax1x.com/2021/04/27/gpLHc6.png" class="eassy_img"></image>
+        <view>不要登录陌生人发过来的任何网站，基本都有木马或病毒，一些陌生网站或者链接要登记银行卡信息的，卖家发过来的一些付款没有成功之类的网站，这种诈骗方式有点防不胜防，大家一定不要打开这些链接，更不要输入个人信息。有一些是发短信过来，里面有一些诈骗信息，不要轻信，更不要拨打里面的电话号码，千万不要向里面的账号汇钱。天上不会掉馅饼，不要相信任何微信、网站、短信上的回馈礼品的宣传，无缘无故的中奖信息，不点击陌生链接，防止无意中下载手机病毒，或者登陆骗子的“钓鱼”网站。</view>
+        <image src="https://z3.ax1x.com/2021/04/27/gpLz4A.png" class="eassy_img"></image>
+        <view>发过来一张所谓的通缉令，账户涉嫌洗钱等之类的诈骗方式，很多人一看到，听到这类的信息，很容易慌了手脚，听到此类信息时，一定要保持冷静，不要被对方迷惑，不要听信。</view>
+      </view>
+    <!-- 文章第二部分 -->
+    
+      <view class="little_title">遇到电信诈骗怎么办？</view>
+      <view class="eassy_index">
+        <view>如果已经受到电信诈骗，不要存在侥幸心理，要及时采取补救措施，挂失冻结银行卡，尽量减少财产损失。迅速打印取款凭证，保存涉案证据，及时报案。向警方提供证据资料，配合警方破案。不能让骗子逍遥法外，也尽快挽回自己的损失。</view>
+      </view>
+      <image src="https://z3.ax1x.com/2021/04/27/gpODbD.png" class="eassy_img"></image>
+      
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>

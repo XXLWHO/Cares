@@ -1,0 +1,35 @@
+<view class="index">
+  <!-- 图片 -->
+  <view class="imageUrl">
+    <image src="https://gd-pub.jinshujufiles.com/hi/20200521140940_7d55f4" mode="aspectFill"></image>
+  </view>
+
+  <view class="message">
+    <text>在这里你可以分享自己身边的新鲜事，你可以分享自己的人生经历，你可以分享自己怎么走出挫折，或者分享激励的事情鼓励所有人。提交成功后经审核通过即可发布。</text>
+  </view>
+
+  <view class="messageInput">
+    <form>
+      <view class="Input">
+        <text class="Text">标题</text>
+        <input type="text" placeholder="请输入标题"/>
+      </view>
+      <view class="Input">
+        <text class="Text">分享类别</text>
+        <input type="text" placeholder="请输入分享类别"/>
+      </view>
+      <view class="Input">
+        <text class="Text">标题</text>
+        <van-uploader :after-read="afterRead" preview-size="220rpx" preview-image max-count="1" image-fit="cover" preview-full-image/>
+      </view>
+      <view class="Input">
+        <text class="Text">分享正文</text>
+        <textarea type="text" placeholder="请输入分享正文" class="Textarea"/>
+      </view>
+    </form>
+  </view>
+  <!-- 按钮 -->
+  <view class="btn">
+    <van-button block color="#43C5FF" class="vanButton" style="border-radius: 15rpx;">确认发布</van-button>
+  </view>
+</view>

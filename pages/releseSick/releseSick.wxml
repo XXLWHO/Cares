@@ -1,0 +1,61 @@
+<view class="index">
+  <!-- 图片 -->
+  <view class="BoxImg">
+    <image src="https://gd-pub.jinshujufiles.com/hi/20200521140940_7d55f4" mode="aspectFill"></image>
+  </view>
+  <!-- 发布 -->
+  <view class="relese">
+    <view class="releseBox">
+      <!-- 提示 -->
+      <text class="point">
+        提示：填写后经后台审核成功后即可向所有人求助。 为帮助您和您的家人，请务必如实填写！
+      </text>
+      <view class="input">
+        <form>
+          <view class="message">
+            <view class="messageInput">
+              <text class="Text">姓名</text>
+              <input type="text" placeholder="请输入姓名" class="textInput"/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">身份证号</text>
+              <input type="text" placeholder="请输入身份证号" class="textInput"/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">性别</text>
+              <input type="text" placeholder="请输入性别" class="textInput"/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">民族</text>
+              <input type="text" placeholder="请输入民族" class="textInput"/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">疾病证明</text>
+              <van-uploader :after-read="afterRead" preview-size="220rpx" preview-image max-count="1" image-fit="cover" preview-full-image/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">住址</text>
+              <input type="text" placeholder="请输入住址" class="textInput"/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">救助说明</text>
+              <textarea type="text" placeholder="请输入救助说明" class="Textarea"/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">标题</text>
+              <input type="text" placeholder="请输入标题" class="textInput"/>
+            </view>
+            <view class="messageInput">
+              <text class="Text">电话</text>
+              <input type="text" placeholder="请输入绑定微信的电话号码" class="textInput"/>
+            </view>
+          </view>
+        </form>
+      </view>
+      <!-- 按钮 -->
+      <view class="buton">
+        <van-button block color="#43C5FF" class="vanButton" style="border-radius: 15rpx;">确认发布</van-button>
+      </view>
+    </view>
+  </view>
+</view>

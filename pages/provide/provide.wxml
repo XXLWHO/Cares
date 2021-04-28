@@ -1,0 +1,47 @@
+<view class="index">
+  <!-- 标题部分 -->
+  <view class="title-ed clearfix">防校园贷安全知识</view>
+  <view class="titlel-bottom">
+    <view class="edu">安全教育</view>
+    <view class="edu1">></view>
+    <view class="edu2">防校园贷</view>
+  </view>
+  <!-- 清除浮动 -->
+  <view style="clear:both;height:0;"></view>
+
+  <!-- 正文部分 -->
+  <view class="eassy">
+    <!-- 文章第一部分 -->
+    <view class="eassy_first">
+      <view class="eassy_index">
+        <view>当踏进大学就已经开始了不一样的生活，我们需要去抵制外面的一切诱惑，千万不要借校园贷，要懂得使用法律保护自己。</view>
+      </view>
+
+      <view class="little_title">校园贷的套路有哪些？</view>
+      <view class="eassy_index">
+        <view>放款的人会告诉你，借款很容易， 但是其实在背后，却是换夜换不完的利息，不要幻想天上掉馅饼。</view>
+        <image src="https://z3.ax1x.com/2021/04/27/g9Gpv9.png" class="eassy_img"></image>
+        <view>第二对于额外的利息，他们不会先告诉你，而是在签完合同之后告诉你这个是高额利息</view>
+        <image src="https://z3.ax1x.com/2021/04/27/g9GE4O.png" class="eassy_img"></image>
+        <view>第三放款人会想方设法让借款的学生们拆东墙补西墙，以贷还贷，不断地垒自身高债务。一旦踏入网贷后果就不是自己想象的，校园贷的利息就像雪球一样越堆越大。</view>
+        <image src="https://z3.ax1x.com/2021/04/27/g98Tjs.png" class="eassy_img"></image>
+        <view>第四放款的人会上门催债，向父母要钱，逼迫他们偿还债务，进行一些胁迫和威胁。</view>
+      </view>
+    <!-- 文章第二部分 -->
+    
+      <view class="little_title">作为学生该如何防范？</view>
+      <view class="eassy_index">
+        <view>首先要树立正确的消费观念；作为当代大学生要学会理性消费，不要盲目的攀比，学会合理支配自己的生活费用。作为当代大学生要学会抵制外面的诱惑，在去想拥有某样东西时要确保自己的能力范围是否能够达到。大学生应该谨记和倡导勤俭节约的优良美德，不要超前消费、过渡消费和错误消费，要树立合理消费、理性消费、科学消费等正确的消费观念。</view>
+      </view>
+      <image src="https://z3.ax1x.com/2021/04/27/g9G858.png" class="eassy_img"></image>
+      <view class="eassy_index">
+        <view>大学生要增强防范意识，谨慎使用个人信息，不随意填写和泄露个人信息，对于推销的网贷产品，切勿盲目信任，提高自身对网贷业务甄别、抵制能力。大学生上学遇到经济困难时应及时找学校资助部门，或者寻找辅导员诉说你的困难，通过老师或学校寻找一份工作，通过勤工俭学保证自己的经济。</view>
+      </view>
+      <image src="https://z3.ax1x.com/2021/04/27/g9Gdrn.png" class="eassy_img"></image>
+    </view>
+    <view class="time">2021/4/21</view>
+  </view>
+  <!-- 正文部分 -->
+  <!-- 页脚部分 -->
+  <view class="line"></view>
+</view>

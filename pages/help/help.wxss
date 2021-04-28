@@ -1,0 +1,18 @@
+.slider-box{
+  position: fixed;
+  width: 80px;
+  height: 100vh;
+  background-color: #F7F8FA;
+  z-index: 10;
+}
+.van-sidebar-item--selected{
+  color:#EE0A24 !important ;
+}
+.right-box{
+  width: 100%;
+  box-sizing: border-box;
+    padding-left: 80px;
+    position: absolute;
+    right:0;
+    z-index: 1;
+}
