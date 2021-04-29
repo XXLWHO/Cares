@@ -44,23 +44,18 @@
   <!-- 轮播图 s -->
   <view class="swiper-box">
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:150px;width:95%;margin:0 auto;border-radius: 15rpx;box-shadow: 0px 0px 8px #727373;overflow: hidden;">
-    <block wx:for="{{4}}" wx:key="*this">
+    <block wx:for="{{swiper_list}}" wx:key="index">
       <swiper-item>
         <image
+        data-id="{{item.article_id}}"
         mode="aspectFill"
         class="swiper-img"
-        src="https://z3.ax1x.com/2021/04/23/cXobY4.png" bind:tap="goDetail"></image>
+        src="{{item.image_url}}" bind:tap="goAriticelDetail"></image>
       </swiper-item>
     </block>
   </swiper>
 </view>
   <!-- 轮播图 e -->
-   <!-- 消息播送 s -->
-  <view class="bro-msg-box">
-    <!-- <van-notice-bar speed="15" color="#96E8BA" background="#ffffff" left-icon="volume-o"
-      text="这一是一串很重要的通知通知哦" /> -->
-  </view>
-  <!-- 数据展示 s -->
 
   <!-- 热点资讯 -->
   <view class="hot-spot">
@@ -68,11 +63,13 @@
       <van-icon name="fire" color="#FF6347" class="fireIcon"/>
       <view class="hot-titles">热点资讯</view>
     </view>
-    <view class="hot-bottom" wx:for="{{hot}}" wx:key="id">
+    <view class="hot-bottom" wx:for="{{hot}}" wx:key="index">
       <!-- 第一层 -->
       <view class="hot-key">
-        <view class="hot-color-first">{{item.id}}</view>
-        <view class="hot-title">{{item.title}}</view>
+        <view class="hot-color-first">{{index+1}}</view>
+        <view class="hot-title" bindtap="goAriticelDetail"
+        data-id="{{item.article_id}}"
+        >{{item.tittle}}</view>
         <image src="../../utils/img/tabBarImg/new.png" class="hot-icon"></image>
       </view>
     </view>
@@ -83,10 +80,9 @@
   <van-sticky>
   <view class="nav-box">
     <van-tabs swipeable color="#96E8BA" title-active-color="#96E8BA" bind:change="onChange" active="{{active}}">
-      <van-tab title="标签 1"></van-tab>
-      <van-tab title="标签 2"></van-tab>
-      <van-tab title="标签 3"></van-tab>
-      <van-tab title="标签 4"></van-tab>
+    <block wx:for="{{tab_list}}" wx:key="index">
+      <van-tab title="{{item.title}}" ></van-tab>
+    </block>
     </van-tabs>
   </view>
 </van-sticky>
@@ -99,17 +95,20 @@
           <scroll-view scroll-y="true"
           style="height:{{swiper_height+'px'}}"
            >
-        <block wx:for="{{30}}" wx:key ="index">
+        <block wx:for="{{tabData_list}}" wx:key ="index">
           <view class="cell-box">
-            <van-cell center border  bind:click="goDetail" >
+            <van-cell center border  bind:click="goAriticelDetail"
+            data-id="{{item.article_id}}"
+             >
               <view slot="title">
-                <view class="van-cell-text">单元格</view>
+                <view class="van-cell-text">
+                {{item.tittle}}</view>
                 <van-tag type="danger" class="litte-text">标签</van-tag>
               </view>
               <view slot="icon">
               <image
               class="left"
-               src="../../utils/img/bg2.jpg"></image>
+               src="{{item.image_url}}"></image>
               </view>
             </van-cell>
           </view>
