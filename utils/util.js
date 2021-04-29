@@ -14,6 +14,23 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+
+const debounce=(func, wait)=>{//防抖
+  // wait：500ms；func：被频繁触发的事件
+  let timeout ;
+  return function () {
+    let context = this;
+    let args = arguments;
+    let later = () => {
+      timeout = null;
+      func.apply(context, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  }
+}
+
 module.exports = {
-  formatTime
+  formatTime,
+  debounce
 }

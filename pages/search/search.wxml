@@ -12,15 +12,20 @@
   <view slot="title" >
     <van-icon 
     class="icon-box"
-    name="eye" color="#788AA6" />
+    name="eye" 
+    size="18px"
+    color="#788AA6" />
   <text class="class-title">分类/发现</text>
 </view>
 </van-cell>
 <van-cell>
   <view  class="tag-box">
-<block wx:for="{{4}}" wx:key="index">
-<view>
-而家该机构i阿囧感觉
+<block wx:for="{{hot_list}}" wx:key="index">
+<view 
+bindtap="goAriticelDetail"
+data-id="{{item.article_id}}"
+>
+{{item.tittle}}
 </view>
 </block>
 </view>
@@ -32,5 +37,29 @@
 <van-empty
 wx:if="{{search_show}}"
  image="search" description="请输入搜索的内容" />
+<!-- 消息展示 e -->
+
+<!-- 消息展示 s -->
+<block wx:if="{{!search_show}}">
+<view class="result-box f" >
+<van-icon name="wap-nav" 
+class="icon-box"
+size="18px"
+  color="#788AA6"
+/>
+  <view class="class-title">
+    搜索结果
+  </view>  
+</view>
+<block wx:for="{{info_list}}" wx:key="index">
+<view class="info-box">
+  <view 
+  bindtap="goAriticelDetail"
+  class="tag-box info-title " data-article_id="{{article_id}}">
+  <text>{{item.tittle}}</text>
+  </view>
+</view>
+</block>
+</block>
 <!-- 消息展示 e -->
 </view>
