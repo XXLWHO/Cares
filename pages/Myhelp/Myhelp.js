@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    myHelpList:[],
+    myMissList:[],
     stepValue:3,
     steps:[
 			{desc:'待审批'},
@@ -12,75 +14,113 @@ Page({
 			{desc:'已审批'},
 			{desc:'发布中'}
     ],
-    show:false
+    step:[
+			{desc:'待审批'},
+			{desc:'审批中'},
+			{desc:'未通过'},
+    ],
+    show:false,
+    show: false,
   },
 
-  myHelp:function() {
+  Myshare:function(e) {
+    let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../helpDetail/helpDetail',
+      url: '../helpDetail/helpDetail?id='+id,
     })
   },
-  remove:function() {
-      this.setData({ show: true });
+  // 删除大病求助
+  remove:function(e) {
+    let that = this
+    wx.showModal({
+      title: '提示',
+      content: '你确定删除这篇文章吗?',
+      success(res) {
+        if (res.confirm) {
+         wx.request({
+           url: 'https://applets.cwp.cool/api/user/helpdelete',
+           method:'POST',
+           data:{
+             id:e.currentTarget.dataset.id
+           },
+           success:(res) => {
+            that.getList()
+           }
+         })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  //删除寻人启事
+  removeMiss:function(e) {
+    let that = this
+    wx.showModal({
+      title: '提示',
+      content: '你确定删除这篇文章吗?',
+      success(res) {
+        if (res.confirm) {
+         wx.request({
+           url: 'https://applets.cwp.cool/api/user/missingdelete',
+           method:'POST',
+           data:{
+             id:e.currentTarget.dataset.id
+           },
+           success:(res) => {
+            that.getMissList()
+           }
+         })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  onLoad:function() {
+    this.getList()
+  },
+  //获取大病求助列表
+  getList:function() {
+    const openid = wx.getStorageSync('openid')
+    wx.request({
+      url: 'https://applets.cwp.cool/api/user/helpshow',
+      method:'GET',
+      data:{
+        openid:openid
+      },
+      success:(res) => {
+        console.log(res);
+        this.setData({
+          myHelpList:res.data.data
+        })
+      }
+    })
+  },
+  // 展示寻人启事所有
+  getMissList:function() {
+    const openid = wx.getStorageSync('openid')
+    wx.request({
+      url: 'https://applets.cwp.cool/api/user/missingshow',
+      method:'GET',
+      data:{
+        openid:openid
+      },
+      success:(res) => {
+        console.log(res);
+        this.setData({
+          myMissList:res.data.data
+        })
+      }
+    })
   },
 
-  onClose() {
-    this.setData({ show: false });
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 点击寻人启示
+  search1:function(e) {
+    if(e.detail.name == 'a'){
+      this.getList()
+    }else{
+      this.getMissList()
+    }
   }
 })

@@ -10,25 +10,25 @@
   <view class="HelpText">
   <!-- 标题正文 -->
   <view class="helpTitle">
-    <view class="title">帮帮这个这个帅比吧！</view>
+    <view class="title">{{HelpMessage.tittle}}</view>
     <!-- 求助信息 -->
     <view class="userMessage">
-      <text>蔡文品，</text>
-      <text>男，</text>
-      <text>汉族，</text>
-      <text>四川广安邻水人，</text>
-      <text>身份证号：511623200010306332，</text>
-      <text>联系电话：13550993955</text>
+      <text>{{HelpMessage.name}}，</text>
+      <text>{{HelpMessage.sex}}，</text>
+      <text>{{HelpMessage.nation}}，</text>
+      <text>{{HelpMessage.address}}人，</text>
+      <text>身份证号：{{HelpMessage.identity}}，</text>
+      <text>联系电话：{{HelpMessage.number}}</text>
     </view>
     <view class="line"></view>
     <!-- 求助描述 -->
     <view class="userDe">
       <view class="title">详细情况</view>
       <view class="userMessage">
-        <text>因为太帅天天被富婆骚扰，怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办</text>
+        <text>{{HelpMessage.explain}}</text>
       </view>
       <view class="Img">
-        <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png" mode="widthFix"></image>
+        <image src="{{HelpMessage.image_url}}" mode="widthFix"></image>
       </view>
     </view>
   </view>

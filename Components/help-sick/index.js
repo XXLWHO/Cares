@@ -1,32 +1,33 @@
-// Components/help-sick/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
    
   },
 
-  /**
-   * 组件的初始数据
-   */
   data: {
-
+    HelpSickList:[],
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
     HelpMe:function() {
       wx.navigateTo({
         url: '../../pages/releseSick/releseSick',
       })
     },
-    UserSick:function() {
-      wx.navigateTo({
-        url: '../../pages/helpDetail/helpDetail',
+  },
+  lifetimes:{
+    attached:function() {
+      wx.request({
+        url: 'https://applets.cwp.cool/api/user/showall',
+        method:'POST',
+        success:(res) => {
+          console.log(res);
+          this.setData({
+            HelpSickList:res.data.data.data
+          })
+        },
+        fail:(res) =>{
+          console.log(res);
+        }
       })
     }
-  }
+  },
 })

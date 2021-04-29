@@ -35,9 +35,9 @@ Component({
         url: 'https://applets.cwp.cool/api/user/showuseratall',
         method:'POST',
         success:(res) => {
-          console.log(res.data.data);
+          console.log(res.data.data.data);
           this.setData({
-            shareDetail:res.data.data
+            shareDetail:res.data.data.data
           })
         }
       })
