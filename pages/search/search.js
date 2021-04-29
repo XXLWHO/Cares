@@ -1,4 +1,6 @@
-// pages/search/search.js
+const app = getApp();
+const url = app.globalData.url;
+var utils = require('../../utils/util');
 Page({
 
   /**
@@ -6,33 +8,69 @@ Page({
    */
   data: {
     // 是否展示搜索消息
-    search_show:true
-    
-  },
-    // 关闭分类
+    search_show: true,
+    // 热搜列表
+    hot_list: [],
+    info_title: "",
+    info_list: []
 
-  onClose(event) {
-    this.setData({
-      [`show.${event.target.id}`]: false,
-    });
   },
-  // 输入内容变化时触发
-  onChange(event){
-    if(event.detail){
+  // 热搜
+  getHot() {
+    let _this = this
+    wx.request({
+      url: url + "/api/user/hotsearch",
+      success(res) {
+        _this.setData({
+          hot_list: res.data.data
+        })
+      },
+      fail: {
+      }
+    }
+    )
+  },
+
+  // 搜索内容qq
+  getSearchList(info) {
+    let _this = this;
+    wx.request({
+      url: url + "/api/user/search",
+      data: {
+        tittle: info
+      },
+      success(res) {
+        _this.setData({
+          info_list: res.data.data
+        })
+      }
+    })
+    if (info) {
       this.setData({
-        search_show:false
+        search_show: false,
       })
-    }else{
+    } else {
       this.setData({
-        search_show:true
+        search_show: true,
+        info_list: [],
       })
     }
+  },
+  // 输入内容变化时触发
+  onChange: utils.debounce(function (event) {
+    this.getSearchList(event.detail)
+  }, 500),
+  // 搜索指定的文章
+  goAriticelDetail(event) {
+      wx.navigateTo({
+        url: `../newsDetail/newsDetail?article_id=${event.currentTarget.dataset.id}`,
+      })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getHot()
   },
 
   /**

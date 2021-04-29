@@ -1,7 +1,8 @@
 // index.js
 // 获取应用实例
-const app = getApp()
-
+const app = getApp();
+const url = app.globalData.url;
+var utils = require('../../utils/util');
 Page({
   data: {
     value:'',
@@ -31,11 +32,15 @@ Page({
       {src:"../../utils/img/tabBarImg/food.png",url:"./../foodsafe/foodsafe",name:"食品安全"},
       {src:"../../utils/img/tabBarImg/provide.png",url:"./../provide/provide",name:"防校园贷"},
     ],
-    hot:[
-      {title:"东哥",url:"",src:"../../utils/img/tabBarImg/new.png",id:1},
-      {title:"东哥",url:"",src:"../../utils/img/tabBarImg/new.png",id:2},
-      {title:"东哥",url:"",src:"../../utils/img/tabBarImg/new.png",id:3},
-    ]
+    hot:[],
+    tab_list:[
+      {title:"自然灾害"},
+      {title:"心理教育"},
+      {title:"疫情防控"},
+      {title:"电信诈骗"}
+    ],
+    swiper_list:[],
+    tabData_list:[]
   },
   // 事件处理函数
   bindViewTap() {
@@ -48,12 +53,14 @@ Page({
     this.setData({
       active:event.detail.name
     })
+    this.getTab(this.data.active);
   },
   // 改变swiper
   changeSwiper(event){
     this.setData({
       active:event.detail.current
     })
+    this.getTab(this.data.active);
   },
   // 遮盖层的显示
   onClickShow() {
@@ -64,34 +71,89 @@ Page({
     this.setData({ show: false });
   },
   // 查看文章详情
-  goDetail(){
+  // 搜索指定的文章
+  goAriticelDetail(event) {
     wx.navigateTo({
-      url: '../index-detail/index-detail',
+      url: `../newsDetail/newsDetail?article_id=${event.currentTarget.dataset.id}`,
     })
-  },
+},
   // 进入搜索页
   goSearch(){
     wx.navigateTo({
       url: '../search/search',
     })
   },
+  // 获取轮播
+  getSwiper(){
+    let _this = this;
+      wx.request({
+        url:url+"/api/user/carousel",
+        success(res){
+          _this.setData({
+            swiper_list:res.data.data
+          })
+        }
+      })
+  },
+  // 热搜
+  getHot() {
+    let _this = this
+    wx.request({
+      url: url + "/api/user/hotsearch",
+      success(res) {
+        _this.setData({
+          hot: res.data.data
+        })
+      },
+      fail: {
+      }
+    }
+    )
+  },
+  // 首页底部的展示
+
+  getTab:utils.debounce(function(type){
+    let _this = this ;
+    console.log(this.data.active);
+    wx.request({
+      url: url+"/api/user/show",
+      data:{
+        type:type+1
+      },
+      success(res){
+        _this.setData({
+          tabData_list:res.data.data
+        })
+      }
+    })
+  },100)
+,
+// 搜索指定的文章
+goAriticelDetail(event) {
+  wx.navigateTo({
+    url: `../newsDetail/newsDetail?article_id=${event.currentTarget.dataset.id}`,
+  })
+},
   onLoad() {
       wx.getSystemInfo({
         success:(res)=>{
-          console.log(res);
+          // console.log(res);
           this.setData({
             swiper_height:res.windowHeight,
             screen_height:res.screenHeight
           })
         }
-      })
+      });
+      this.getSwiper();
+      this.getHot();
+      this.getTab(0);
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
     wx.getUserProfile({
       desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        console.log(res)
+        // console.log(res)
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
