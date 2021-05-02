@@ -8,25 +8,26 @@
   tag="急寻"
   thumb-mode="widthFix"
   thumb="/utils/img/bg8.jpg"
-
 >
 <view slot="title" class="title" >
   地区-姓名-年龄
 </view>
-<view slot="footer" >
+<view slot="footer"  class="btn-box">
     <van-button 
     round
+    class="btn"
     color=""
     type="warning"
-    size="small"
+    size="mini"
     plain
     bindtap="goFindDetail"
     >查看此详情</van-button>
     <van-button 
+    class="btn"
     round
     color=""
     type="danger"
-    size="small"
+    size="mini"
     bind:click="makePhone"
     >联系登记人</van-button>
   </view>

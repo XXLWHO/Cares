@@ -22,7 +22,11 @@
   padding-left: 80px;
   z-index: 100;
 }
-
-.van-button--small {
-    margin:0  3px ;
+.btn-box .van-button--mini {
+  box-sizing: content-box;
+  margin-left: 8rpx;
+  padding: 5rpx 10rpx;
+}
+.van-card {
+  padding: 8px 10px !important;
 }

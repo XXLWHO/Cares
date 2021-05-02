@@ -7,7 +7,8 @@ Page({
    */
   data: {
     // 数据
-    data_list:{}
+    data_list:{},
+    id:0,
   },
 // 回到案例首页
 goBack(){
@@ -15,10 +16,26 @@ wx.navigateBack({
   delta:1
 })
 },
-  /**
+onShareAppMessage() {
+  const promise = new Promise(resolve => {
+    setTimeout(() => {
+      resolve({
+        title:this.data.data_list.tittle
+      })
+    }, 2000)
+  })
+  return {
+    title: this.data.data_list.tittle,
+    path: '/page/newDetail?id='+this.data.id,
+    promise 
+  }
+},
+
+/**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options);
     let _this = this ;
     wx.request({
       url: url+"/api/user/searchone",
@@ -27,10 +44,12 @@ wx.navigateBack({
       },
       success(res){
         _this.setData({
-          data_list:res.data.data[0]
+          data_list:res.data.data[0],
+          id:Number(options.article_id)
         })
       }
     })
+   
   },
 
   /**

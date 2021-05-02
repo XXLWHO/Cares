@@ -16,19 +16,17 @@
 
 <view class="share-box f-a">
 <view class="share-left f-j" bindtap="goBack">
-  <van-icon name="wap-home-o"  size="25px"
+  <van-icon name="revoke"  size="25px"
    />
     <view class="f-a btn-text">返回</view>
 </view>
 <view class="share-right">
-<view class="share-btn f-j">
+<button class="share-btn f-j"  open-type="share" >
     <van-icon 
     size="25px"
     name="wechat"  color="#fff"/>
     <view class="f-a btn-text">分享</view>
+</button>
 </view>
-
-</view>
-
 </view>
 </view>

@@ -1,138 +1,140 @@
 <view class="new-bg">
-<van-sticky >
-<view class="sticky-box"> 
-  <view class="search-box" >
-    <van-search 
-    bind:focus="goSearch"
-    shape="round" value="{{ value }}" placeholder="请输入搜索关键词" placeholder-style="color:#959595" />
-  </view>
-  <view class="tab-box">
-    <van-tabs active="{{activeKey}}" bind:change="tabChange" swipeable>
-      <block wx:for="{{tab_list}}" wx:key="index">
-        <van-tab title="{{item.title}}"></van-tab>
-      </block>
-    </van-tabs>
-  </view>
-  <view class="items f-j">
-    <block wx:for="{{tab_list}}" wx:key="index">
-      <view class="item-img" bindtap="imgTabChange" data-index ="{{index}}">
-        <view class="">
-          <image class="img" src="{{item.src}}"></image>
-        </view>
-        <view class="item-title">
-          {{item.title}}事件
-        </view>
+  <van-sticky>
+    <view class="sticky-box">
+      <view class="search-box">
+        <van-search bind:focus="goSearch" shape="round" value="{{ value }}" placeholder="请输入搜索关键词"
+          placeholder-style="color:#959595" />
       </view>
-    </block>
-  </view>
-</view>
-</van-sticky>
+      <view class="tab-box">
+        <van-tabs active="{{activeKey}}" bind:change="tabChange" swipeable>
+          <block wx:for="{{tab_list}}" wx:key="index">
+            <van-tab title="{{item.title}}"></van-tab>
+          </block>
+        </van-tabs>
+      </view>
+      <view class="items f-j">
+        <block wx:for="{{tab_list}}" wx:key="index">
+          <view class="item-img" bindtap="imgTabChange" data-index="{{index}}">
+            <view class="">
+              <image class="img" src="{{item.src}}"></image>
+            </view>
+            <view class="item-title">
+              {{item.title}}事件
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </van-sticky>
 
   <!-- 切换盒子 s -->
   <view class="change-box">
-    <swiper 
-    bind:change="changeSwiper"
-    style="height:{{swiper_height+'px'}}" current="{{activeKey}}">
+    <swiper bind:change="changeSwiper" style="height:{{swiper_height+'px'}}" current="{{activeKey}}">
       <block wx:for="{{5}}" wx:key="index">
         <swiper-item>
-        
           <scroll-view scroll-y="true" style="height:{{swiper_height}}px">
             <block wx:if="{{activeKey === 0}}">
-            <view class="class-box">
-              <view class="class-titles f-j-s">
-                <view class="title">
-                  特别关注
-                </view>
-                <view class="title">
-                  <van-icon name="arrow" />
-                </view>
-              </view>
-              <view class="special-box">
-                <swiper style="height:120px;" autoplay="true">
-                  <block wx:for="{{5}}" wx:key="index">
-                    <swiper-item>
-                      <view special-item>
-                        <image mode="aspectFill" class="special-img" src="../../utils/img/20210324021815935.jpg">
-                        </image>
-                      </view>
-                    </swiper-item>
-                  </block>
-                </swiper>
-              </view>
-            </view>
-            <view class="class-box">
-              <view class="class-titles f-j-s">
-                <view class="title">
-                  热门事件
-                </view>
-                <view class="title">
-                  <van-icon name="arrow" />
-                </view>
-              </view>
-              <block wx:for="{{rank_list}}" wx:key="index">
-                <view class="hot-box f">
-                  <view class="hot-left">
-                    <image class="left-img" src="../../utils/img/bg2.jpg"></image>
+              <view class="class-box">
+                <view class="class-titles f-j-s">
+                  <view class="title">
+                    特别关注
                   </view>
-                  <view class="hot-right f">
-                    <view class="right-item-1">
-                      <image class="right-img" src="{{item.rank_src}}"></image>
-                    </view>
-                    <view class="right-item">
-                      <view class="right-item-2">
-                        今日头条极速版
-                      </view>
-                      <view class="right-item-3">
-                        新闻
-                      </view>
-                      <view class="right-item-3">
-                        新闻详情详情详情详情详情详情
-                      </view>
-                    </view>
+                  <view class="title">
+                    <van-icon name="arrow" />
                   </view>
                 </view>
-              </block>
-            </view>
-        </block>
+                <view class="special-box">
+                  <swiper style="height:120px;" autoplay="true">
+                    <block wx:for="{{swiper_list}}" wx:key="index">
+                      <swiper-item>
+                        <view special-item>
+                          <image 
+                          data-id="{{item.article_id}}"
+                          bindtap="goDetail"
+                          mode="aspectFill" class="special-img" src="{{item.image_url}}">
+                          </image>
+                        </view>
+                      </swiper-item>
+                    </block>
+                  </swiper>
+                </view>
+              </view>
+              <view class="class-box">
+                <view class="class-titles f-j-s">
+                  <view class="title">
+                    热门事件
+                  </view>
+                  <view class="title">
+                    <van-icon name="arrow" />
+                  </view>
+                </view>
+                <block wx:for="{{rank_list}}" wx:key="index">
+                  <view class="hot-box f">
+                    <view class="hot-left">
+                      <image class="left-img" src="../../utils/img/bg2.jpg"></image>
+                    </view>
+                    <view class="hot-right f">
+                      <view class="right-item-1">
+                        <image class="right-img" src="{{item.rank_src}}"></image>
+                      </view>
+                      <view 
+                      bindtap="goDetail"
+                      data-id="{{item.article_id}}"
+                      class="right-item">
+                        <view class="right-item-2">
+                          {{item.tittle}}
+                        </view>
+                        <view class="right-item-3">
+                          社会新闻
+                        </view>
+                        <!-- <view class="right-item-3">
+                         点击详情
+                        </view> -->
+                      </view>
+                    </view>
+                  </view>
+                </block>
+              </view>
+            </block>
+            <view class="info-box ">
+              <block wx:for="{{news_list}}" wx:key="index">
 
-          <view class="header-box">
-            <image class="header-img" src="../../utils/img/bg9.jpg" alt=""></image>
-            <view class="head-title">
-              强势回归
-              今日热点 热点
-              <view class=" head-lit">
-                西瓜视频全网独播
+              <block wx:if="{{index === 0}}">
+                <view class="header-box"
+                data-id="{{item.article_id}}"
+                      bind:tap="goDetail" 
+                >
+              <image class="header-img" src="{{item.image_url}}" alt=""></image>
+              <view class="head-title">
+              {{item.tittle}}
+                <view class=" head-lit">
+                  
+                  {{item.content}}
+                </view>
               </view>
             </view>
-          </view>
-          <view class="info-box ">
-              <block wx:for="{{10}}" wx:key="index">
+              </block>
                 <view class="f info-item">
                   <view class="left-box">
-                    <image class="left-box-img" src="../../utils/img/bg8.jpg" alt=""></image>
+                    <image class="left-box-img" src="{{item.image_url}}" alt=""></image>
                   </view>
                   <view class="right-box ">
                     <view class="right-title f-a">
-                      汉字中有大学问
+                      {{item.tittle}}
                     </view>
                     <view class="right-desc f-a">
-                      请仔细靠靠靠靠靠靠靠靠靠靠
+                      {{item.content}}
                     </view>
                     <view class="look-btn">
-                      <van-button 
-                      bind:click="goDetail"
-                      plain
-                      size="small"
-                      type="info" 
-                      round
-                      block>查看详情
+                      <van-button data-id="{{item.article_id}}"
+                      bind:click="goDetail" plain size="small" type="info" round block>查看详情
                       </van-button>
                     </view>
                   </view>
                 </view>
               </block>
-          </view>
-        </scroll-view>
+            </view>
+          </scroll-view>
         </swiper-item>
       </block>
     </swiper>

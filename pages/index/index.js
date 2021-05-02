@@ -114,7 +114,7 @@ Page({
 
   getTab:utils.debounce(function(type){
     let _this = this ;
-    console.log(this.data.active);
+    // console.log(this.data.active);
     wx.request({
       url: url+"/api/user/show",
       data:{

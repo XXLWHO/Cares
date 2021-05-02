@@ -1,12 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/newsDetail/newsDetail",
     "pages/news/news",
+    "pages/newsDetail/newsDetail",
+    "pages/help/help",
+    "pages/index/index",
     "pages/search/search",
     "pages/helpDetail/helpDetail",
     "pages/guidance/guidance",
-    "pages/help/help",
     "pages/user/user",
     "pages/logs/logs",
     "pages/education/education",

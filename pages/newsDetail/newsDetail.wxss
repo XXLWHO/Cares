@@ -1,6 +1,6 @@
 .detail-box{
   padding: 20px;
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 .head{
   margin: 10px 0 ;
@@ -35,9 +35,10 @@
 }
 .img{
   border-radius: 10px;
+  width: 100%;
 }
 .share-box{
-  padding: 10px;
+  padding: 10rpx;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -51,7 +52,7 @@
 .share-btn{
   font-size: 15px;
   color: #ffffff;
-  padding: 5px  ;
+  padding: 5rpx  ;
   border-radius: 20px;
   text-align: center;
   background-color: #07C160;

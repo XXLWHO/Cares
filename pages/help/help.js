@@ -7,7 +7,7 @@ Page({
   data: {
     userInfo:'',
 // 侧边导航栏index
-activeKey:5,
+activeKey:2,
 // 侧边栏题目加需要跳转的url
 tabList:[
   {title:"心理寻助",show:true},
