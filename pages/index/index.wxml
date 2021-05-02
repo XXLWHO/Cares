@@ -90,7 +90,7 @@
   <!-- 分类消息 s -->
   
     <swiper current="{{active}}" bindchange="changeSwiper" style="height:{{swiper_height+'px'}}">
-      <block wx:for="{{4}}" wx:key="*this">
+      <block wx:for="{{tab_list}}" wx:key="index" wx:for-item="itemTab">
         <swiper-item>
           <scroll-view scroll-y="true"
           style="height:{{swiper_height+'px'}}"
@@ -103,7 +103,7 @@
               <view slot="title">
                 <view class="van-cell-text">
                 {{item.tittle}}</view>
-                <van-tag type="danger" class="litte-text">标签</van-tag>
+                <van-tag type="primary" class="litte-text" size="medium" >{{itemTab.title}}</van-tag>
               </view>
               <view slot="icon">
               <image
