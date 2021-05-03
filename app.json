@@ -1,11 +1,11 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/Myhelp/Myhelp",
     "pages/help/help",
     "Components/help-publish/index",
     "pages/news/news",
     "pages/newsDetail/newsDetail",
-    "pages/index/index",
     "pages/search/search",
     "pages/helpDetail/helpDetail",
     "pages/guidance/guidance",
