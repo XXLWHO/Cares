@@ -1,7 +1,8 @@
 import provinceData from "../../utils/city-data/province";
 import cityData from "../../utils/city-data/city";
 import areaData from "../../utils/city-data/area";
-
+const app = getApp();
+const url = app.globalData.url;
 Page({
   /**
    * 页面的初始数据
@@ -10,46 +11,46 @@ Page({
     radio: "",
     input_list: [
       {
-        title: "失散地点", name: "", type: "digit", autosize: "false",
+        title: "失散地点", name: "address", type: "digit", autosize: "false",
         btn_show: true, tap: "showPickEare",
         value: ""
       },
       {
-        title: "失散日期", name: "", type: "digit", autosize: "false",
+        title: "失散日期", name: "date", type: "digit", autosize: "false",
         btn_show: true,
         tap: "showPickTime",
         value: ""
       },
-      { title: "姓名", name: "", type: "number", autosize: "false" ,
+      { title: "姓名", name: "name", type: "number", autosize: "false" ,
       len:20
     },
       {
-        title: "性别", name: "", autosize: "false",
+        title: "性别", name: "sex", autosize: "false",
         btn_show: true,
         tap: "showPickGen",
         value: ""
       },
-      { title: "年龄", name: "", type: "digit", autosize: "false",
+      { title: "年龄", name: "age", type: "digit", autosize: "false",
     len:3
     },
       {
-        title: "身高", name: "",
+        title: "身高", name: "height",
         type: "digit", autosize: "false",
         len:6
       },
       {
-        title: "特征描述", name: "",
+        title: "特征描述", name: "feature",
         type: "textarea", autosize: "true",
         len:200
       },
-      { title: "失散过程", name: "", type: "textarea", autosize: "true" ,
+      { title: "失散过程", name: "process", type: "textarea", autosize: "true" ,
       len:200},
       {
-        title: "家属附言", name: "",
+        title: "家属附言", name: "postscript",
         type: "textarea", autosize: "true",
         len:200
       },
-    { title: "联系方式", name: "" ,
+    { title: "联系方式", name: "tele" ,
     len:11,type:"number"},
     ],
     // 图片
@@ -172,35 +173,87 @@ Page({
   showPickPhoto(){
 
   },
-  afterRead(event) {
-    const { file } = event.detail;
-    // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
-    // wx.uploadFile({
-    //   url: 'https://example.weixin.qq.com/upload', // 仅为示例，非真实的接口地址
-    //   filePath: file.url,
-    //   name: 'file',
-    //   formData: { user: 'test' },
-    //   success(res) {
-    //     // 上传完成需要更新 fileList
-    //     const { fileList = [] } = this.data;
-    //     fileList.push({ ...file, url: res.data });
-    //     this.setData({ fileList });
-    //   },
-    // });
-    const obj = {
-      url: file.url
+  formSubmit(e) {
+    let data = e.detail.value;
+    data.openid = "123";
+    if(this.data.fileList.length !== 0){
+      let image_url = this.data.fileList[0].url[0];
+      wx.uploadFile({
+        header: {
+          'content-type': 'multipart/form-data'
+        },
+        url: url+"/api/user/uploadmiss", //仅为示例，非真实的接口地址
+        filePath:image_url,
+        name: 'image_url',
+        formData: data,
+        success :res=>{
+          let data = JSON.parse(res.data);
+          if(data.code === "200"){
+            wx.showToast({
+              title: '上传成功！我们会及时审核！',
+            })
+            setTimeout(()=>{
+              wx.navigateBack({
+                delta: 1,
+              })
+            },2000)
+            
+          }else{
+            wx.showToast({
+              title: '请填写全部的内容！',
+              icon:"error"
+            })
+          }
+  
+        },
+        fail:err=>{
+          wx.showToast({
+            title: '请您检查网络或者填写内容！',
+            icon:"error"
+          })
+        }
+      })
+    }else{
+      wx.showToast({
+        title: '请您填写全部的内容！',
+        icon:"error"
+      })
     }
-    this.data.fileList.push(obj)
-    this.setData({
-      fileList: this.data.fileList
-    })
-    console.log(this.data.fileList);
+   
+    
   },
+  afterRead(event) {
+    wx.chooseImage({
+      count: 3,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success :res=> {
+        const tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths);
+        let obj ={};
+        obj.url = tempFilePaths;
+        this.data.fileList.push(obj);
+        this.setData({
+          fileList: this.data.fileList
+        });
+    let image_url = this.data.fileList[0].url[0]
+    console.log(image_url);
 
+    }
+    })
+  },
+deleteImg(event){
+   this.data.fileList.splice(event.detail.index,1);
+  this.setData({
+    fileList:this.data.fileList
+  })
+
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
   },
 
   /**

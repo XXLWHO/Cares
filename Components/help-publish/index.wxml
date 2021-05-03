@@ -12,7 +12,7 @@
         非常感谢您能够参加调查，希望各区县详细填写收集的情况，希望能够得到您的大力支持与合作。现在我们就马上开始！
       </view>
       </view>
-      <form>
+      <form bindsubmit="formSubmit">
         <view class="cell-box">
           <view class="fill-item">
             <van-cell-group>
@@ -21,6 +21,7 @@
                 center="false"
                 input-align="left"
                 size="normal" 
+                name="{{item.name}}"
                 type="{{item.type}}"
                 autosize="{{item.autosize}}"
                 readonly="{{item.btn_show}}" 
@@ -41,7 +42,12 @@
               照片
               </view>
               <view class="right">
-                <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" />
+                <van-uploader 
+                max-count="1"
+                file-list="{{ fileList }}" 
+                bind:="afterRead"
+                bind:delete="deleteImg"
+                />
               </view>
               </view>
             </van-cell>
@@ -51,8 +57,14 @@
           </view>
         </view>
         <view class="sub-btn">
-          <van-button color="linear-gradient(to right, #4bb0ff, #6149f6)" type="primary" round hairline="true" block>
-            块级元素</van-button>
+          <van-button 
+          color="linear-gradient(to right, #4bb0ff, #6149f6)" type="primary"
+           round 
+           hairline="true"
+            block
+            form-type="submit"
+            >
+            提交</van-button>
         </view>
       </form>
     </view>

@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/Myhelp/Myhelp",
+    "pages/help/help",
+    "Components/help-publish/index",
     "pages/news/news",
     "pages/newsDetail/newsDetail",
-    "pages/help/help",
     "pages/index/index",
     "pages/search/search",
     "pages/helpDetail/helpDetail",
@@ -18,7 +20,6 @@
     "pages/releseSick/releseSick",
     "pages/share/share",
     "pages/shareDetail/shareDetail",
-    "pages/Myhelp/Myhelp",
     "pages/schoolForce/schoolForce",
     "pages/phoneFraud/phoneFraud",
     "pages/foodsafe/foodsafe",

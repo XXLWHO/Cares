@@ -76,53 +76,43 @@
   </van-tab>
   <!-- 寻人启事 -->
   <van-tab title="寻人启事" name="b">
+  <block wx:for="{{find_list}}" wx:key="index">
     <view class="MyActicle">
-    <view class="acticle">
+    <view class="acticle" 
+    >
       <!-- 图片 -->
       <view class="left">
-        <image src="../../utils/img/20210324021815935.jpg"></image>
+        <image src="{{item.image_url}}"></image>
       </view>
       <!-- 标题内容 -->
-      <view class="middle">
-        <view class="MyTitle">蔡文品好帅</view>
-        <text class="MyActicles">内容gas的看法路过sad会计分录噶是的克己奉公会计师的拉格斐德生科技奥拉夫广东省考几分</text>
+      <view class="middle"
+      data-id="{{item.id}}"
+    bindtap="findHelp"
+      >
+        <view class="MyTitle">{{item.name}}</view>
+        <text class="MyActicles">
+        {{item.feature}}
+        </text>
       </view>
-      <!-- 时间按钮 -->
-      <view class="right">
-        <text class="MyTime">2020/4/22</text>
-        <van-button type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal">删除</van-button>
-      </view>
-    </view>
-    <!-- 进度条 -->
-    <view class="progress">
-      <text class="status">审批状态</text>
-      <van-steps direction="horizontal" active-color="#43C5FF" active="2" steps="{{steps}}"></van-steps>
-    </view>
-  </view>
 
-  <view class="MyActicle">
-    <view class="acticle">
-      <!-- 图片 -->
-      <view class="left">
-        <image src="../../utils/img/20210324021815935.jpg"></image>
-      </view>
-      <!-- 标题内容 -->
-      <view class="middle">
-        <view class="MyTitle">蔡文品好帅</view>
-        <text class="MyActicles">内容gas的看法路过sad会计分录噶是的克己奉公会计师的拉格斐德生科技奥拉夫广东省考几分</text>
-      </view>
       <!-- 时间按钮 -->
-      <view class="right">
+      <view class="right" >
         <text class="MyTime">2020/4/22</text>
-        <van-button type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal">删除</van-button>
+        <van-button 
+        data-id="{{item.id}}"
+        bind:click="deleteFind"
+        type="primary" size="small" color="#43C5FF" class="remove" direction="horizontal"
+        data-id="{{item.id}}"
+        >删除</van-button>
       </view>
     </view>
     <!-- 进度条 -->
     <view class="progress">
       <text class="status">审批状态</text>
-      <van-steps direction="horizontal" active-color="#43C5FF" active="2" steps="{{steps}}"></van-steps>
+      <van-steps direction="horizontal" active-color="#43C5FF" active="{{item.pass}}" steps="{{steps}}"></van-steps>
     </view>
   </view>
+  </block>
   </van-tab>
 </van-tabs>
 

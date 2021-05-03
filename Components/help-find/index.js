@@ -9,7 +9,7 @@ Component({
    * 页面的初始数据
    */
   data: {
-
+    find_list:{},
   },
   methods: {
     // 跳转发布页面
@@ -19,15 +19,17 @@ Component({
       })
     },
     // 跳转详情页
-    goFindDetail() {
+    goFindDetail(event) {
+      let id = event.currentTarget.dataset.id;
       wx.navigateTo({
-        url: '../../Components/help-findDetail/index',
+        url: '/Components/help-findDetail/index?id='+id,
       })
     },
     // 拨打电话
-    makePhone() {
+    makePhone(event) {
+      let phone = event.currentTarget.dataset.phone;
       wx.makePhoneCall({
-        phoneNumber: '11164648498',
+        phoneNumber: phone,
         success: (res) => { },
         fail: (res) => {
           wx.showToast({
@@ -39,18 +41,27 @@ Component({
         complete: (res) => { },
       })
     },
-    // 获取文章详情
-    getFindDetail() {
-      let openid = wx.getStorageSync('openid');
-      console.log(openid);
-    }
+    getList(){
+      wx.request({
+        url: url+"/api/user/showmissall",
+        method:"POST",
+        success:res=>{
+          console.log(res);
+          this.setData({
+            find_list:res.data.data.data
+          })
+        }
+      })
+    },
+
   },
+  // 
+
   /**
    * 生命周期函数--监听页面加载
    */
   created: function () {
-    this.getFindDetail();
-    this.getFindDetail();
+    this.getList();
   },
 
   /**

@@ -3,7 +3,8 @@
     <!-- 位置 s -->
     <view class="search">
       <van-search 
-      bind:focus="goSearch"
+      disabled
+      bind:tap="goSearch"
       value="{{ value }}" shape="round" background="transparent" placeholder="搜索关键词"/>
     </view>
    <!-- 位置 e -->

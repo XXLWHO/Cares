@@ -1,25 +1,50 @@
-// Components/help-findDetail/index.js
+const app = getApp();
+const url  = app.globalData.url;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      detail_list:{}
   },
-
+    getData(id){
+      wx.request({
+        url: url+"/api/user/missingdetail",
+        data:{
+          id:id
+        },
+        success:res=>{
+          // console.log(res);
+          this.setData({
+            detail_list:res.data.data[0]
+          })
+        }
+      })
+    },
+    makePhone(event){
+      let phone = event.currentTarget.dataset.phone;
+      wx.makePhoneCall({
+        phoneNumber: phone,
+        fail:err=>{
+            wx.showToast({
+              title: '您取消了拨打电话',
+              icon:"none"
+            })
+        }
+      })
+    },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function (event) {
+    let id = Number(event.id);
+    this.getData(id);
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

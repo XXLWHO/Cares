@@ -1,19 +1,20 @@
 <view class="find-bg">
-<block wx:for="{{5}}" wx:key="index">
+<block wx:for="{{find_list}}" wx:key="index">
 <view class="find-item">
     <van-card
     custom-class="background:#ffffff"
-  desc="寻人启事详情"
+  desc="{{item.feature}}"
   lazy-load
   tag="急寻"
   thumb-mode="widthFix"
-  thumb="/utils/img/bg8.jpg"
+  thumb="{{item.image_url}}"
 >
 <view slot="title" class="title" >
-  地区-姓名-年龄
+  {{item.address}}-{{item.name}}-{{item.age}}
 </view>
 <view slot="footer"  class="btn-box">
     <van-button 
+    data-id ="{{item.id}}"
     round
     class="btn"
     color=""
@@ -29,6 +30,7 @@
     type="danger"
     size="mini"
     bind:click="makePhone"
+    data-phone="{{item.tele}}"
     >联系登记人</van-button>
   </view>
 </van-card>

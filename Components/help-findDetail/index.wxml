@@ -16,31 +16,46 @@
     </view>
   </view>
     <!-- 求助信息 -->
+    <!-- <block wx:for="{{detail_list}}" wx:key = "index"> -->
+    
     <view class="userMessage">
-      <text>蔡文品，</text>
-      <text>男，</text>
-      <text>汉族，</text>
-      <text>四川广安邻水人，</text>
-      <text>身份证号：511623200010306332，</text>
-      <text>联系电话：13550993955</text>
+      <text>姓名:{{detail_list.name}}, </text>
+      <text>性别:{{detail_list.sex}}，</text>
+      <text>身高:{{detail_list.height}}，</text>
+      <text>地址:{{detail_list.address}}，</text>
+      <text>年龄:{{detail_list.age}}，</text>
+      <text>联系电话:{{detail_list.tele}} </text>
+      <text>日期:{{detail_list.date}}, </text>
+      <text>特点:{{detail_list.feature}}, </text>
     </view>
+
     <view class="line"></view>
     <!-- 求助描述 -->
     <view class="userDe">
-      <view class="title">详细情况</view>
+
+      <view class="title">失散过程</view>
       <view class="userMessage">
-        <text>因为太帅天天被富婆骚扰，怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办怎么办</text>
+        <text>{{detail_list.postscript}}</text>
+      </view>
+      <view class="title">家属附言</view>
+      <view class="userMessage">
+        <text>{{detail_list.postscript}}</text>
       </view>
       <view class="Img">
-        <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png" mode="widthFix"></image>
+        <image src="{{detail_list.image_url}}" mode="widthFix"></image>
       </view>
-      <view class="time">2021/4/21</view>
+      <view class="time">{{detail_list.created_at}}</view>
     </view>
+  <!-- </block> -->
   </view>
   </view>
 
   <!-- 点击 -->
   <view class="bottomBtn">
-    <van-button color="#43C5FF" block>联系他</van-button>
+    <van-button 
+    data-phone = "{{detail_list.tele}}"
+    bind:click="makePhone"
+    color="#43C5FF" 
+    block>联系他</van-button>
   </view>
 </view>
