@@ -12,24 +12,24 @@
     <form>
       <view class="Input">
         <text class="Text">标题</text>
-        <input type="text" placeholder="请输入标题"/>
+        <input type="text" placeholder="请输入标题" value = "{{tittle}}"/>
       </view>
       <view class="Input">
         <text class="Text">分享类别</text>
-        <input type="text" placeholder="请输入分享类别"/>
+        <input type="text" placeholder="请输入分享类别" value="{{type}}"/>
       </view>
       <view class="Input">
-        <text class="Text">标题</text>
-        <van-uploader :after-read="afterRead" preview-size="220rpx" preview-image max-count="1" image-fit="cover" preview-full-image/>
+        <text class="Text">图片</text>
+        <van-uploader preview-size="220rpx" preview-image max-count="1" image-fit="cover" preview-full-image v-model="fileList"/>
       </view>
       <view class="Input">
         <text class="Text">分享正文</text>
-        <textarea type="text" placeholder="请输入分享正文" class="Textarea"/>
+        <textarea type="text" placeholder="请输入分享正文" class="Textarea" value="{{content}}"/>
       </view>
     </form>
   </view>
   <!-- 按钮 -->
   <view class="btn">
-    <van-button block color="#43C5FF" class="vanButton" style="border-radius: 15rpx;">确认发布</van-button>
+    <van-button block color="#43C5FF" class="vanButton" style="border-radius: 15rpx;" bindtap="define">确认发布</van-button>
   </view>
 </view>

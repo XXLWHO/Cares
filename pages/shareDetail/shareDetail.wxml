@@ -15,7 +15,7 @@
   <view class="eassy">
     <!-- 发表人 -->
   <view class="UserText">
-    <text class="userName">{{shre.name}}</text>
+    <text class="userName">{{share.name}}</text>
     <text class="share">发表分享</text>
   </view>
     <!-- 文章第一部分 -->

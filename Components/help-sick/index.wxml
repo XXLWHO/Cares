@@ -1,49 +1,21 @@
-<!--Components/help-sick/index.wxml-->
 <view class="index">
+
   <!-- 求助 -->
-  <view class="help" bindtap="UserSick">
+    <view class="help" wx:for="{{HelpSickList}}" wx:key="id">
+      <navigator url="../../pages/helpDetail/helpDetail?id={{item.id}}">
     <!-- 标题 -->
     <view class="title">
-      <text>快来帮助蔡文品这个帅比吧</text>
+      <text>{{item.tittle}}</text>
     </view>
     <!-- 照片 -->
     <view class="helpImg">
-      <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png"></image>
+      <image src="{{item.image_url}}" mode="aspectFill"></image>
     </view>
     <!-- 查看 -->
     <view class="helpAbout">
       <text>查看详情</text>
     </view>
-  </view>
-
-  <view class="help">
-    <!-- 标题 -->
-    <view class="title">
-      <text>快来帮助蔡文品这个帅比吧</text>
-    </view>
-    <!-- 照片 -->
-    <view class="helpImg">
-      <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png"></image>
-    </view>
-    <!-- 查看 -->
-    <view class="helpAbout">
-      <text>查看详情</text>
-    </view>
-  </view>
-
-  <view class="help">
-    <!-- 标题 -->
-    <view class="title">
-      <text>快来帮助蔡文品这个帅比吧</text>
-    </view>
-    <!-- 照片 -->
-    <view class="helpImg">
-      <image src="https://z3.ax1x.com/2021/04/23/cXobY4.png"></image>
-    </view>
-    <!-- 查看 -->
-    <view class="helpAbout">
-      <text>查看详情</text>
-    </view>
+  </navigator>
   </view>
 
   <!-- 发布求助 -->
